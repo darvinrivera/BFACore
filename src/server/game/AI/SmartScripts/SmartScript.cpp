@@ -706,7 +706,7 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
             delete targets;
             break;
         }
-        case SMART_ACTION_CROSS_CAST:
+        case SMART_ACTION_INVOKER_CAST:
         {
             Unit* tempLastInvoker = GetLastInvoker();
             if (!tempLastInvoker)
@@ -1969,7 +1969,7 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
             delete targets;
             break;
         }
-        case SMART_ACTION_INVOKER_CAST:
+        case SMART_ACTION_CROSS_CAST:
         {
             ObjectList* casters = GetTargets(CreateSmartEvent(SMART_EVENT_UPDATE_IC, 0, 0, 0, 0, 0, SMART_ACTION_NONE, 0, 0, 0, 0, 0, 0, (SMARTAI_TARGETS)e.action.crossCast.targetType, e.action.crossCast.targetParam1, e.action.crossCast.targetParam2, e.action.crossCast.targetParam3, 0), unit);
             if (!casters)
