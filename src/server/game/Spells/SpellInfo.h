@@ -684,8 +684,6 @@ class TC_GAME_API SpellInfo
         bool CanSpellProvideImmunityAgainstAura(SpellInfo const* auraSpellInfo) const;
         bool SpellCancelsAuraEffect(AuraEffect const* aurEff) const;
 
-        bool IsAreaTriggerAuraEffect(uint32 difficulty, bool onlyplayer) const;
-
     private:
         // loading helpers
         void _InitializeExplicitTargetMask();
