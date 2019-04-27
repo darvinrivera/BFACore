@@ -706,7 +706,7 @@ void SmartScript::ProcessAction(SmartScriptHolder& e, Unit* unit, uint32 var0, u
             delete targets;
             break;
         }
-        case SMART_ACTION_INVOKER_CAST:
+        case SMART_ACTION_CROSS_CAST:
         {
             Unit* tempLastInvoker = GetLastInvoker();
             if (!tempLastInvoker)
