@@ -11,7 +11,7 @@
 #include "QueryPackets.h"
 #include "WeatherMgr.h"
 #include "GameObject.h"
-#include "the_nighthold.h"
+#include "thenighthold.h"
 #include "AreaBoundary.h"
 
 static BossBoundaryData const boundaries =

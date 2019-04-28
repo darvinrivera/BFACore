@@ -12,7 +12,7 @@
 #include "SpellAuras.h"
 #include "SpellScript.h"
 #include "SpellAuraEffects.h"
-#include "the_nighthold.h"
+#include "thenighthold.h"
 #include "CreatureAIImpl.h"
 #include "Log.h"
 #include "Object.h"

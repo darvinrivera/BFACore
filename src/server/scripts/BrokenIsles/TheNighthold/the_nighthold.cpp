@@ -7,7 +7,7 @@
 #include "SpellInfo.h"
 #include "Vehicle.h"
 #include "CombatAI.h"
-#include "the_nighthold.h"
+#include "thenighthold.h"
 #include "InstanceScript.h"
 #include "Unit.h"
 #include "ObjectAccessor.h"

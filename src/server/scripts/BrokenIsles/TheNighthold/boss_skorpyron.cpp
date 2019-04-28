@@ -13,7 +13,7 @@
 #include "CombatAI.h"
 #include "MoveSplineInitArgs.h"
 #include "GridNotifiers.h"
-#include "the_nighthold.h"
+#include "thenighthold.h"
 #include "InstanceScript.h"
 #include "Unit.h"
 #include "ObjectAccessor.h"

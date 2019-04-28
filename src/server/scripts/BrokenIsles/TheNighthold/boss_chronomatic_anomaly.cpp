@@ -13,7 +13,7 @@
 #include "Player.h"
 #include "MoveSplineInitArgs.h"
 #include "GridNotifiers.h"
-#include "the_nighthold.h"
+#include "thenighthold.h"
 #include "MoveSplineInit.h"
 #include "InstanceScript.h"
 #include "Unit.h"
