@@ -9390,6 +9390,9 @@ bool Unit::IsDisallowedMountForm(uint32 spellId, ShapeshiftForm form, uint32 dis
 
     if (form)
     {
+        if (form == FORM_MOONKIN_FORM || form == FORM_MOONKIN_FORM_RESTORATION)
+            return false;
+
         SpellShapeshiftFormEntry const* shapeshift = sSpellShapeshiftFormStore.LookupEntry(form);
         if (!shapeshift)
             return true;
@@ -12932,6 +12935,7 @@ uint32 Unit::GetModelForForm(ShapeshiftForm form) const
                     return 37730;
                 return 21244;
             case FORM_MOONKIN_FORM:
+            case FORM_MOONKIN_FORM_RESTORATION:
             {
                 // Glyph of Stars
                 if (HasAura(114301))
@@ -14836,5 +14840,32 @@ void Unit::GetAreaTriggerListWithSpellIDInRange(std::list<AreaTrigger*>& list, u
 
             return false;
         });
+    }
+}
+
+void Unit::GetAreaTriggerList(std::vector<AreaTrigger*> &list, uint32 spellId)
+{
+    Map* map = GetMap();
+    if (!map)
+        return;
+
+    if (!spellId)
+        return;
+
+    SpellInfo const* spellInfo = sSpellMgr->GetSpellInfo(spellId);
+    if (!spellInfo)
+        return;
+
+    if (!spellInfo->IsAreaTriggerAuraEffect(map->GetDifficultyID(), GetTypeId() == TYPEID_PLAYER))
+        return;
+
+    if (m_areaTriggers.empty())
+        return;
+
+    for (auto itr : m_areaTriggers)
+    {
+        if (itr.second == spellId)
+            if (AreaTrigger* at = ObjectAccessor::GetAreaTrigger(*this, itr.first))
+                list.push_back(at);
     }
 }

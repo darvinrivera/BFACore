@@ -824,6 +824,7 @@ void InstanceScript::DoCompleteAchievement(uint32 achievement)
                 player->CompletedAchievement(achievementEntry);
 }
 
+
 void InstanceScript::DoStartMovie(uint32 movieId)
 {
     MovieEntry const* movieEntry = sMovieStore.LookupEntry(movieId);
@@ -1346,4 +1347,4 @@ void InstanceScript::DoCompletedAchievement(AchievementEntry const* entry)
         for (Map::PlayerList::const_iterator i = PlayerList.begin(); i != PlayerList.end(); ++i)
             if (Player* player = i->GetSource())
                 player->CompletedAchievement(entry);
-}
+} 
