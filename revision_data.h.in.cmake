@@ -9,8 +9,8 @@
  #define _SOURCE_DIRECTORY          R"(@CMAKE_SOURCE_DIR@)"
  #define _BUILD_DIRECTORY           R"(@BUILDDIR@)"
  #define _MYSQL_EXECUTABLE          R"(@MYSQL_EXECUTABLE@)"
- #define _FULL_DATABASE             "BFADB_world_801.00.sql"
- #define _HOTFIXES_DATABASE         "BFADB_hotfixes_801.00.sql"
+ #define _FULL_DATABASE             "BFADB_world_801.02.sql"
+ #define _HOTFIXES_DATABASE         "BFADB_hotfixes_801.02.sql"
  #define VER_COMPANYNAME_STR        "BFACore Developers"
  #define VER_LEGALCOPYRIGHT_STR     "(c)2018-2019 BFACore"
  #define VER_FILEVERSION            0,0,0
