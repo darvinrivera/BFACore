@@ -240,7 +240,7 @@ class TC_GAME_API InstanceScript : public ZoneScript
         void DoUpdateCriteria(CriteriaTypes type, uint32 miscValue1 = 0, uint32 miscValue2 = 0, Unit* unit = NULL);
 
         // Complete Achievement for all players in instance
-        //void DoCompletedAchievement(AchievementEntry const* entry);
+        void DoCompletedAchievement(AchievementEntry const* entry);
 
         // Start/Stop Timed Achievement Criteria for all players in instance
         void DoStartCriteriaTimer(CriteriaTimedTypes type, uint32 entry);
@@ -269,8 +269,10 @@ class TC_GAME_API InstanceScript : public ZoneScript
 
         void DoKilledMonsterKredit(uint32 questId, uint32 entry, ObjectGuid guid = ObjectGuid::Empty);
 
-        // Complete Achievement for all players in instance
-         void DoCompletedAchievement(AchievementEntry const* entry);
+        // Complete Achievement
+        void DoCompleteAchievement(uint32 achievement);
+
+
 
         // Update Achievement Criteria for all players in instance
         void DoUpdateAchievementCriteria(CriteriaTypes type, uint32 miscValue1 = 0, uint32 miscValue2 = 0, Unit* unit = nullptr);

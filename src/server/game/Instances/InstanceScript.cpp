@@ -824,6 +824,7 @@ void InstanceScript::DoCompleteAchievement(uint32 achievement)
                 player->CompletedAchievement(achievementEntry);
 }
 
+
 void InstanceScript::DoStartMovie(uint32 movieId)
 {
     MovieEntry const* movieEntry = sMovieStore.LookupEntry(movieId);
