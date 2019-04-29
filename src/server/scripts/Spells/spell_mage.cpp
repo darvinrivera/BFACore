@@ -2882,7 +2882,7 @@ class spell_mage_ebonbolt_damage : public SpellScript
     void DoEffectHitTarget(SpellEffIndex /*effIndex*/)
     {
         Unit* hitUnit = GetHitUnit();
-        ObjectGuid& primaryTarget = GetCaster()->Variables.GetValue<ObjectGuid>("explTarget");
+        const ObjectGuid& primaryTarget = GetCaster()->Variables.GetValue<ObjectGuid>("explTarget");
         int32 damage = GetHitDamage();
         //if (!hitUnit !primaryTarget)
             return;
