@@ -1346,4 +1346,4 @@ void InstanceScript::DoCompletedAchievement(AchievementEntry const* entry)
         for (Map::PlayerList::const_iterator i = PlayerList.begin(); i != PlayerList.end(); ++i)
             if (Player* player = i->GetSource())
                 player->CompletedAchievement(entry);
-}
+} 

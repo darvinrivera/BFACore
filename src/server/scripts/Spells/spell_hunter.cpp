@@ -45,92 +45,104 @@
 
 enum HunterSpells
 {
-    SPELL_HUNTER_A_MURDER_OF_CROWS_1                = 131894,
-    SPELL_HUNTER_A_MURDER_OF_CROWS_2                = 206505,
-    SPELL_HUNTER_A_MURDER_OF_CROWS_DAMAGE           = 131900,
-    SPELL_HUNTER_AIMED_SHOT                         = 19434,
-    SPELL_HUNTER_ANIMAL_INSTINCTS                   = 204315,
-    SPELL_HUNTER_ANIMAL_INSTINCTS_CHEETAH           = 204324,
-    SPELL_HUNTER_ANIMAL_INSTINCTS_MONGOOSE          = 204333,
-    SPELL_HUNTER_ANIMAL_INSTINCTS_RAPTOR            = 204321,
-    SPELL_HUNTER_ARCANE_SHOT                        = 185358,
-    SPELL_HUNTER_ASPECT_OF_THE_CHEETAH_EFFECT_2     = 186258,
-    SPELL_HUNTER_ASPECT_OF_THE_EAGLE                = 186289,
-    SPELL_HUNTER_AURA_SHOOTING                      = 224729,
-    SPELL_HUNTER_AUTO_SHOT                          = 75,
-    SPELL_HUNTER_BARRAGE                            = 120360,
-    SPELL_HUNTER_BASIC_ATTACK_COST_MODIFIER         = 62762,
-    SPELL_HUNTER_BEAST_CLEAVE_AURA                  = 115939,
-    SPELL_HUNTER_BEAST_CLEAVE_DAMAGE                = 118459,
-    SPELL_HUNTER_BEAST_CLEAVE_PROC                  = 118455,
-    SPELL_HUNTER_BESTIAL_WRATH                      = 19574,
-    SPELL_HUNTER_CALL_PET_1                         = 883,
-    SPELL_HUNTER_CALL_PET_2                         = 83242,
-    SPELL_HUNTER_CALL_PET_3                         = 83243,
-    SPELL_HUNTER_CALL_PET_4                         = 83244,
-    SPELL_HUNTER_CALL_PET_5                         = 83245,
-    SPELL_HUNTER_BLACK_ARROW                        = 194599,
-    SPELL_HUNTER_BLINK_STRIKES                      = 130392,
-    SPELL_HUNTER_BLINK_STRIKES_TELEPORT             = 130393,
-    SPELL_HUNTER_CAMOUFLAGE                         = 199483,
-    SPELL_HUNTER_COBRA_SHOT                         = 193455,
-    SPELL_HUNTER_DIRE_BEAST_GENERIC                 = 120679,
-    SPELL_HUNTER_DIRE_FRENZY                        = 217200,
-    SPELL_HUNTER_DIRE_FRENZY_DAMAGE                 = 217207,
-    SPELL_HUNTER_DISENGAGE                          = 781,
-    SPELL_HUNTER_EXHILARATION                       = 109304,
-    SPELL_HUNTER_EXHILARATION_PET                   = 128594,
-    SPELL_HUNTER_EXHILARATION_PET_AURA              = 231546,
-    SPELL_HUNTER_EXPLOSIVE_SHOT                     = 212431,
-    SPELL_HUNTER_EXPLOSIVE_SHOT_DAMAGE              = 212680,
-    SPELL_HUNTER_EXPLOSIVE_SHOT_DETONATE            = 212679,
-    SPELL_HUNTER_FLANKING_STRIKE                    = 202800,
-    SPELL_HUNTER_FLANKING_STRIKE_PROC               = 204740,
-    SPELL_HUNTER_FLANKING_STRIKE_PROC_UP            = 206933,
-    SPELL_HUNTER_FLARE_EFFECT                       = 28822,
-    SPELL_HUNTER_FRENZY_STACKS                      = 19615,
-    SPELL_HUNTER_HARPOON                            = 190925,
-    SPELL_HUNTER_HARPOON_ROOT                       = 190927,
-    SPELL_HUNTER_HUNTERS_MARK                       = 185987,
-    SPELL_HUNTER_HUNTERS_MARK_AURA                  = 185365, //This one is the graphics (The arrow effect)
-    SPELL_HUNTER_HUNTERS_MARK_AURA_2                = 185743, //This one is enabling "Marked Shot"
-    SPELL_HUNTER_IMPROVED_MEND_PET                  = 24406,
-    SPELL_HUNTER_INTIMIDATION_STUN                  = 24394,
-    SPELL_HUNTER_INVIGORATION_TRIGGERED             = 53398,
-    SPELL_HUNTER_KILL_COMMAND                       = 34026,
-    SPELL_HUNTER_KILL_COMMAND_CHARGE                = 118171,
-    SPELL_HUNTER_KILL_COMMAND_TRIGGER               = 83381,
-    SPELL_HUNTER_LACERATE                           = 185855,
-    SPELL_HUNTER_LONE_WOLF                          = 155228,
-    SPELL_HUNTER_MARKED_SHOT                        = 185901,
-    SPELL_HUNTER_MARKED_SHOT_DAMAGE                 = 212621,
-    SPELL_HUNTER_MARKING_TARGETS                    = 223138,
-    SPELL_HUNTER_MASTERS_CALL_TRIGGERED             = 62305,
-    SPELL_HUNTER_MISDIRECTION                       = 34477,
-    SPELL_HUNTER_MISDIRECTION_PROC                  = 35079,
-    SPELL_HUNTER_MONGOOSE_BITE                      = 190928,
-    SPELL_HUNTER_MONGOOSE_FURY                      = 190931,
-    SPELL_HUNTER_MULTISHOT                          = 2643,
-    SPELL_HUNTER_PET_HEART_OF_THE_PHOENIX           = 55709,
-    SPELL_HUNTER_PET_HEART_OF_THE_PHOENIX_DEBUFF    = 55711,
+    SPELL_HUNTER_A_MURDER_OF_CROWS_1 = 131894,
+    SPELL_HUNTER_A_MURDER_OF_CROWS_2 = 206505,
+    SPELL_HUNTER_A_MURDER_OF_CROWS_DAMAGE = 131900,
+    SPELL_HUNTER_AIMED_SHOT = 19434,
+    SPELL_HUNTER_ANIMAL_INSTINCTS = 204315,
+    SPELL_HUNTER_ANIMAL_INSTINCTS_CHEETAH = 204324,
+    SPELL_HUNTER_ANIMAL_INSTINCTS_MONGOOSE = 204333,
+    SPELL_HUNTER_ANIMAL_INSTINCTS_RAPTOR = 204321,
+    SPELL_HUNTER_ARCANE_SHOT = 185358,
+    SPELL_HUNTER_ASPECT_OF_THE_CHEETAH_EFFECT_2 = 186258,
+    SPELL_HUNTER_ASPECT_OF_THE_EAGLE = 186289,
+    SPELL_HUNTER_AURA_SHOOTING = 224729,
+    SPELL_HUNTER_AUTO_SHOT = 75,
+    SPELL_HUNTER_BARRAGE = 120360,
+    SPELL_HUNTER_BASIC_ATTACK_COST_MODIFIER = 62762,
+    SPELL_HUNTER_BEAST_CLEAVE_AURA = 115939,
+    SPELL_HUNTER_BEAST_CLEAVE_DAMAGE = 118459,
+    SPELL_HUNTER_BEAST_CLEAVE_PROC = 118455,
+    SPELL_HUNTER_BESTIAL_WRATH = 19574,
+    SPELL_HUNTER_CALL_PET_1 = 883,
+    SPELL_HUNTER_CALL_PET_2 = 83242,
+    SPELL_HUNTER_CALL_PET_3 = 83243,
+    SPELL_HUNTER_CALL_PET_4 = 83244,
+    SPELL_HUNTER_CALL_PET_5 = 83245,
+    SPELL_HUNTER_BLACK_ARROW = 194599,
+    SPELL_HUNTER_BLINK_STRIKES = 130392,
+    SPELL_HUNTER_BLINK_STRIKES_TELEPORT = 130393,
+    SPELL_HUNTER_CAMOUFLAGE = 199483,
+    SPELL_HUNTER_COBRA_SHOT = 193455,
+    SPELL_HUNTER_DIRE_BEAST_GENERIC = 120679,
+    SPELL_HUNTER_DIRE_FRENZY = 217200,
+    SPELL_HUNTER_DIRE_FRENZY_DAMAGE = 217207,
+    SPELL_HUNTER_DISENGAGE = 781,
+    SPELL_HUNTER_EXHILARATION = 109304,
+    SPELL_HUNTER_EXHILARATION_PET = 128594,
+    SPELL_HUNTER_EXHILARATION_PET_AURA = 231546,
+    SPELL_HUNTER_EXPLOSIVE_SHOT = 212431,
+    SPELL_HUNTER_EXPLOSIVE_SHOT_DAMAGE = 212680,
+    SPELL_HUNTER_EXPLOSIVE_SHOT_DETONATE = 212679,
+    SPELL_HUNTER_FLANKING_STRIKE = 202800,
+    SPELL_HUNTER_FLANKING_STRIKE_PROC = 204740,
+    SPELL_HUNTER_FLANKING_STRIKE_PROC_UP = 206933,
+    SPELL_HUNTER_FLARE_EFFECT = 28822,
+    SPELL_HUNTER_FRENZY_STACKS = 19615,
+    SPELL_HUNTER_HARPOON = 190925,
+    SPELL_HUNTER_HARPOON_ROOT = 190927,
+    SPELL_HUNTER_HUNTERS_MARK = 185987,
+    SPELL_HUNTER_HUNTERS_MARK_AURA = 185365, //This one is the graphics (The arrow effect)
+    SPELL_HUNTER_HUNTERS_MARK_AURA_2 = 185743, //This one is enabling "Marked Shot"
+    SPELL_HUNTER_IMPROVED_MEND_PET = 24406,
+    SPELL_HUNTER_INTIMIDATION_STUN = 24394,
+    SPELL_HUNTER_INVIGORATION_TRIGGERED = 53398,
+    SPELL_HUNTER_KILL_COMMAND = 34026,
+    SPELL_HUNTER_KILL_COMMAND_CHARGE = 118171,
+    SPELL_HUNTER_KILL_COMMAND_TRIGGER = 83381,
+    SPELL_HUNTER_LACERATE = 185855,
+    SPELL_HUNTER_LONE_WOLF = 155228,
+    SPELL_HUNTER_MARKED_SHOT = 185901,
+    SPELL_HUNTER_MARKED_SHOT_DAMAGE = 212621,
+    SPELL_HUNTER_MARKING_TARGETS = 223138,
+    SPELL_HUNTER_MASTERS_CALL_TRIGGERED = 62305,
+    SPELL_HUNTER_MISDIRECTION = 34477,
+    SPELL_HUNTER_MISDIRECTION_PROC = 35079,
+    SPELL_HUNTER_MONGOOSE_BITE = 190928,
+    SPELL_HUNTER_MONGOOSE_FURY = 190931,
+    SPELL_HUNTER_MULTISHOT = 2643,
+    SPELL_HUNTER_PET_HEART_OF_THE_PHOENIX = 55709,
+    SPELL_HUNTER_PET_HEART_OF_THE_PHOENIX_DEBUFF = 55711,
     SPELL_HUNTER_PET_HEART_OF_THE_PHOENIX_TRIGGERED = 54114,
-    SPELL_HUNTER_PET_LAST_STAND_TRIGGERED           = 53479,
-    SPELL_HUNTER_POSTHAST                           = 109215,
-    SPELL_HUNTER_POSTHAST_SPEED                     = 118922,
-    SPELL_HUNTER_RANGERS_NET_INCREASE_SPEED         = 206755,
-    SPELL_HUNTER_RAPTOR_STRIKE                      = 186270,
-    SPELL_HUNTER_SENTINEL                           = 206817,
-    SPELL_HUNTER_SERPENT_STING                      = 87935,
-    SPELL_HUNTER_SERPENT_STING_DAMAGE               = 118253,
-    SPELL_HUNTER_SPIKED_COLLAR                      = 53184,
-    SPELL_HUNTER_STEADY_FOCUS                       = 193533,
-    SPELL_HUNTER_STEADY_FOCUS_PROC                  = 193534,
-    SPELL_HUNTER_STICKY_BOMB_PROC                   = 191244,
-    SPELL_HUNTER_THOWING_AXES_DAMAGE                = 200167,
-    SPELL_HUNTER_TRAILBLAZER                        = 199921,
-    SPELL_HUNTER_TRAILBLAZER_BUFF                   = 231390,
-    SPELL_HUNTER_VULNERABLE                         = 187131,
-    SPELL_HUNTER_WILD_CALL_AURA                     = 185791,
+    SPELL_HUNTER_PET_LAST_STAND_TRIGGERED = 53479,
+    SPELL_HUNTER_POSTHAST = 109215,
+    SPELL_HUNTER_POSTHAST_SPEED = 118922,
+    SPELL_HUNTER_RANGERS_NET_INCREASE_SPEED = 206755,
+    SPELL_HUNTER_RAPTOR_STRIKE = 186270,
+    SPELL_HUNTER_SENTINEL = 206817,
+    SPELL_HUNTER_SERPENT_STING = 87935,
+    SPELL_HUNTER_SERPENT_STING_DAMAGE = 118253,
+    SPELL_HUNTER_SPIKED_COLLAR = 53184,
+    SPELL_HUNTER_STEADY_FOCUS = 193533,
+    SPELL_HUNTER_STEADY_FOCUS_PROC = 193534,
+    SPELL_HUNTER_STICKY_BOMB_PROC = 191244,
+    SPELL_HUNTER_THOWING_AXES_DAMAGE = 200167,
+    SPELL_HUNTER_TRAILBLAZER = 199921,
+    SPELL_HUNTER_TRAILBLAZER_BUFF = 231390,
+    SPELL_HUNTER_VULNERABLE = 187131,
+    SPELL_HUNTER_WILD_CALL_AURA = 185791,
+
+    SPELL_HUNTER_CARVE = 187708,
+    SPELL_HUNTER_BUTCHERY = 212436,
+    SPELL_HUNTER_INTERNAL_BLEEDING = 270343,
+
+    SPELL_WILDFIRE_INFUSION_TALENT = 271014,
+    SPELL_WILDFIRE_INFUSION_OVERRIDE_1 = 271015, // Pheromone Bomb
+    SPELL_WILDFIRE_INFUSION_OVERRIDE_2 = 271020, // Shrapnel Bomb, Default Bomb when Talent selected
+    SPELL_WILDFIRE_INFUSION_OVERRIDE_3 = 271050, // Volatile Bomb
+    SPELL_WILDFIRE_INFUSION_DUMMY = 271615,
+
+    SPELL_VOLATILE_BOMB_DAMAGE = 260231
 };
 
 enum AncientHysteriaSpells
@@ -3208,6 +3220,315 @@ struct at_hun_sentinel : AreaTriggerAI
     }
 };
 
+
+// 270339 - Shrapnel Bomb Proc
+class wlp_spell_hunter_shrapnel_bomb_proc : public AuraScript
+{
+    PrepareAuraScript(wlp_spell_hunter_shrapnel_bomb_proc);
+
+    bool CheckProc(ProcEventInfo& eventInfo)
+    {
+        if (eventInfo.GetSpellInfo() && eventInfo.GetSpellInfo()->Id == SPELL_HUNTER_MONGOOSE_BITE || eventInfo.GetSpellInfo()->Id == SPELL_HUNTER_RAPTOR_STRIKE
+            || eventInfo.GetSpellInfo()->Id == SPELL_HUNTER_CARVE || eventInfo.GetSpellInfo()->Id == SPELL_HUNTER_BUTCHERY)
+            return true;
+        return false;
+    }
+
+    void OnProc(AuraEffect const* /*aurEff*/, ProcEventInfo& procInfo)
+    {
+        procInfo.GetActor()->CastSpell(procInfo.GetActionTarget(), SPELL_HUNTER_INTERNAL_BLEEDING, true);
+    }
+
+    void Register() override
+    {
+        DoCheckProc += AuraCheckProcFn(wlp_spell_hunter_shrapnel_bomb_proc::CheckProc);
+        OnEffectProc += AuraEffectProcFn(wlp_spell_hunter_shrapnel_bomb_proc::OnProc, EFFECT_1, SPELL_AURA_DUMMY);
+    }
+};
+
+// 260231 - Violent Reaction
+class wlp_spell_hunter_violent_reaction : public SpellScript
+{
+    PrepareSpellScript(wlp_spell_hunter_violent_reaction);
+
+    void DoEffectHitTarget(SpellEffIndex /*effIndex*/)
+    {
+        if (Unit* target = GetHitUnit())
+            if (Aura* sting = target->GetAura(SPELL_HUNTER_SERPENT_STING_DAMAGE))
+                sting->RefreshDuration();
+    }
+
+    void FilterTargets(std::list<WorldObject*>& targets)
+    {
+        targets.remove_if([](WorldObject* target) { return target->ToUnit() && !target->ToUnit()->HasAura(SPELL_HUNTER_SERPENT_STING_DAMAGE); });
+    }
+
+    void Register() override
+    {
+        OnEffectHitTarget += SpellEffectFn(wlp_spell_hunter_violent_reaction::DoEffectHitTarget, EFFECT_0, SPELL_EFFECT_SCHOOL_DAMAGE);
+        OnObjectAreaTargetSelect += SpellObjectAreaTargetSelectFn(wlp_spell_hunter_violent_reaction::FilterTargets, EFFECT_0, TARGET_UNIT_DEST_AREA_ENEMY);
+    }
+};
+
+// 271014 - Wildfire Infusion Talent
+class wlp_spell_hunter_wildfire_infusion_talent : public AuraScript
+{
+    PrepareAuraScript(wlp_spell_hunter_wildfire_infusion_talent);
+
+    void OnApply(AuraEffect const* /*aurEff*/, AuraEffectHandleModes /*mode*/)
+    {
+        GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_2, true);
+    }
+
+    void OnRemove(AuraEffect const* /*aurEff*/, AuraEffectHandleModes /*mode*/)
+    {
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_1);
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_2);
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_3);
+    }
+
+    void Register() override
+    {
+        OnEffectApply += AuraEffectApplyFn(wlp_spell_hunter_wildfire_infusion_talent::OnApply, EFFECT_0, SPELL_AURA_DUMMY, AURA_EFFECT_HANDLE_REAL_OR_REAPPLY_MASK);
+        OnEffectRemove += AuraEffectRemoveFn(wlp_spell_hunter_wildfire_infusion_talent::OnRemove, EFFECT_0, SPELL_AURA_DUMMY, AURA_EFFECT_HANDLE_REAL_OR_REAPPLY_MASK);
+    }
+};
+
+// 271615 - Wildfire Infusion Dummy
+class wlp_spell_hunter_wildfire_infusion_dummy : public AuraScript
+{
+    PrepareAuraScript(wlp_spell_hunter_wildfire_infusion_dummy);
+
+    void OnApply(AuraEffect const* /*aurEff*/, AuraEffectHandleModes /*mode*/)
+    {
+        if (GetTarget()->HasAura(SPELL_WILDFIRE_INFUSION_OVERRIDE_1))
+        {
+            if (roll_chance_i(50))
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_2, true);
+            else
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_3, true);
+            GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_1);
+        }
+        else if (GetTarget()->HasAura(SPELL_WILDFIRE_INFUSION_OVERRIDE_2))
+        {
+            if (roll_chance_i(50))
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_1, true);
+            else
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_3, true);
+            GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_2);
+        }
+        else if (GetTarget()->HasAura(SPELL_WILDFIRE_INFUSION_OVERRIDE_3))
+        {
+            if (roll_chance_i(50))
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_1, true);
+            else
+                GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_2, true);
+            GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_3);
+        }
+        else
+            GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_2, true);
+    }
+
+    void OnPeriodic(AuraEffect const* /*aurEff*/)
+    {
+        if (GetTarget()->IsInCombat())
+        {
+            RefreshDuration();
+            return;
+        }
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_1);
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_2);
+        GetTarget()->RemoveAurasDueToSpell(SPELL_WILDFIRE_INFUSION_OVERRIDE_3);
+        if (GetTarget()->HasAura(SPELL_WILDFIRE_INFUSION_TALENT))
+            GetTarget()->CastSpell(GetTarget(), SPELL_WILDFIRE_INFUSION_OVERRIDE_2, true);
+    }
+
+    void Register() override
+    {
+        OnEffectApply += AuraEffectApplyFn(wlp_spell_hunter_wildfire_infusion_dummy::OnApply, EFFECT_0, SPELL_AURA_PERIODIC_DUMMY, AURA_EFFECT_HANDLE_REAL_OR_REAPPLY_MASK);
+        OnEffectPeriodic += AuraEffectPeriodicFn(wlp_spell_hunter_wildfire_infusion_dummy::OnPeriodic, EFFECT_0, SPELL_AURA_PERIODIC_DUMMY);
+    }
+};
+
+// 259495 - Wildfire Bomb
+class wlp_spell_hunter_wildfire_bomb : public SpellScript
+{
+    PrepareSpellScript(wlp_spell_hunter_wildfire_bomb);
+
+    void DoEffectHitTarget(SpellEffIndex /*effIndex*/)
+    {
+        if (Unit* target = GetHitUnit())
+            GetCaster()->Variables.Set<Unit*>("mainTarget", target);
+    }
+
+    void DoCast()
+    {
+        if (GetCaster()->HasAura(SPELL_WILDFIRE_INFUSION_TALENT))
+            GetCaster()->CastSpell(GetCaster(), SPELL_WILDFIRE_INFUSION_DUMMY, true);
+    }
+
+    void Register() override
+    {
+        AfterCast += SpellCastFn(wlp_spell_hunter_wildfire_bomb::DoCast);
+        OnEffectHitTarget += SpellEffectFn(wlp_spell_hunter_wildfire_bomb::DoEffectHitTarget, EFFECT_0, SPELL_EFFECT_TRIGGER_MISSILE);
+    }
+};
+
+// 265163 - Wildfire Bomb AT Creator
+struct wlp_at_hunter_wildfire_bomb : AreaTriggerAI
+{
+    wlp_at_hunter_wildfire_bomb(AreaTrigger* areatrigger) : AreaTriggerAI(areatrigger) { }
+
+    enum UsedSpells
+    {
+        SPELL_HUNTER_WILDFIRE_BOMB_DAMAGE   = 265157,
+        SPELL_HUNTER_WILDIFRE_BOMB_DOT      = 259496
+    };
+
+    Unit* mainTarget = nullptr;
+
+    void OnCreate() override
+    {
+        if (Unit* caster = at->GetCaster())
+        {
+            mainTarget = caster->Variables.GetValue<Unit*>("mainTarget");
+            caster->Variables.Remove("mainTarget");
+            if (mainTarget)
+                at->SetOrientation(caster->GetAngle(mainTarget));
+            else
+                at->Remove();
+        }
+    }
+
+    void OnUnitEnter(Unit* enteredUnit) override
+    {
+        if (Unit* caster = at->GetCaster())
+            if (caster->IsValidAttackTarget(enteredUnit))
+            {
+                caster->CastSpell(enteredUnit, SPELL_HUNTER_WILDFIRE_BOMB_DAMAGE, true);
+                if (at->HasInArc(static_cast<float>(M_PI-M_PI/5), enteredUnit) || enteredUnit == mainTarget)
+                    caster->CastSpell(enteredUnit, SPELL_HUNTER_WILDIFRE_BOMB_DOT, true);
+            }
+    }
+};
+
+// 265163 - Shrapnel Bomb AT Creator
+struct wlp_at_hunter_shrapnel_bomb : AreaTriggerAI
+{
+    wlp_at_hunter_shrapnel_bomb(AreaTrigger* areatrigger) : AreaTriggerAI(areatrigger) { }
+
+    enum UsedSpells
+    {
+        SPELL_HUNTER_SHRAPNEL_BOMB_DAMAGE = 270338,
+        SPELL_HUNTER_SHRAPNEL_BOMB_DOT = 270339
+    };
+
+    Unit* mainTarget = nullptr;
+
+    void OnCreate() override
+    {
+        if (Unit* caster = at->GetCaster())
+        {
+            mainTarget = caster->Variables.GetValue<Unit*>("mainTarget");
+            caster->Variables.Remove("mainTarget");
+            if (mainTarget)
+                at->SetOrientation(caster->GetAngle(mainTarget));
+            else
+                at->Remove();
+        }
+    }
+
+    void OnUnitEnter(Unit* enteredUnit) override
+    {
+        if (Unit* caster = at->GetCaster())
+            if (caster->IsValidAttackTarget(enteredUnit))
+            {
+                caster->CastSpell(enteredUnit, SPELL_HUNTER_SHRAPNEL_BOMB_DAMAGE, true);
+                if (at->HasInArc(static_cast<float>(M_PI - M_PI / 5), enteredUnit) || enteredUnit == mainTarget)
+                    caster->CastSpell(enteredUnit, SPELL_HUNTER_SHRAPNEL_BOMB_DOT, true);
+            }
+    }
+};
+
+// 271047 - Volatile Bomb AT Creator
+struct wlp_at_hunter_volatile_bomb : AreaTriggerAI
+{
+    wlp_at_hunter_volatile_bomb(AreaTrigger* areatrigger) : AreaTriggerAI(areatrigger) { }
+
+    enum UsedSpells
+    {
+        SPELL_HUNTER_VOLATILE_BOMB_DAMAGE = 271048,
+        SPELL_HUNTER_VOLATILE_BOMB_DOT = 271049
+    };
+
+    Unit* mainTarget = nullptr;
+
+    void OnCreate() override
+    {
+        if (Unit* caster = at->GetCaster())
+        {
+            mainTarget = caster->Variables.GetValue<Unit*>("mainTarget");
+            caster->Variables.Remove("mainTarget");
+            if (mainTarget)
+            {
+                at->SetOrientation(caster->GetAngle(mainTarget));
+                caster->CastSpell(mainTarget, SPELL_VOLATILE_BOMB_DAMAGE, true);
+            }
+            else
+                at->Remove();
+        }
+    }
+
+    void OnUnitEnter(Unit* enteredUnit) override
+    {
+        if (Unit* caster = at->GetCaster())
+            if (caster->IsValidAttackTarget(enteredUnit))
+            {
+                caster->CastSpell(enteredUnit, SPELL_HUNTER_VOLATILE_BOMB_DAMAGE, true);
+                if (at->HasInArc(static_cast<float>(M_PI - M_PI / 5), enteredUnit) || enteredUnit == mainTarget)
+                    caster->CastSpell(enteredUnit, SPELL_HUNTER_VOLATILE_BOMB_DOT, true);
+            }
+    }
+};
+
+// 270327  - Pheromone Bomb AT Creator
+struct wlp_at_hunter_pheromone_bomb : AreaTriggerAI
+{
+    wlp_at_hunter_pheromone_bomb(AreaTrigger* areatrigger) : AreaTriggerAI(areatrigger) { }
+
+    enum UsedSpells
+    {
+        SPELL_HUNTER_PHEROMONE_BOMB_DAMAGE = 270329,
+        SPELL_HUNTER_PHEROMONE_BOMB_DOT = 270332
+    };
+
+    Unit* mainTarget = nullptr;
+
+    void OnCreate() override
+    {
+        if (Unit* caster = at->GetCaster())
+        {
+            mainTarget = caster->Variables.GetValue<Unit*>("mainTarget");
+            caster->Variables.Remove("mainTarget");
+            if (mainTarget)
+                at->SetOrientation(caster->GetAngle(mainTarget));
+            else
+                at->Remove();
+        }
+    }
+
+    void OnUnitEnter(Unit* enteredUnit) override
+    {
+        if (Unit* caster = at->GetCaster())
+            if (caster->IsValidAttackTarget(enteredUnit))
+            {
+                caster->CastSpell(enteredUnit, SPELL_HUNTER_PHEROMONE_BOMB_DAMAGE, true);
+                if (at->HasInArc(static_cast<float>(M_PI - M_PI / 5), enteredUnit) || enteredUnit == mainTarget)
+                    caster->CastSpell(enteredUnit, SPELL_HUNTER_PHEROMONE_BOMB_DOT, true);
+            }
+    }
+};
+
 void AddSC_hunter_spell_scripts()
 {
     new spell_hun_harpoon();
@@ -3280,6 +3601,17 @@ void AddSC_hunter_spell_scripts()
     new at_hun_binding_shot();
     new at_hun_caltrops();
     RegisterAreaTriggerAI(at_hun_sentinel);
+
+    //bfa
+    RegisterAreaTriggerAI(wlp_at_hunter_wildfire_bomb);
+    RegisterSpellScript(wlp_spell_hunter_wildfire_bomb);
+    RegisterAuraScript(wlp_spell_hunter_wildfire_infusion_talent);
+    RegisterAreaTriggerAI(wlp_at_hunter_pheromone_bomb);
+    RegisterAreaTriggerAI(wlp_at_hunter_shrapnel_bomb);
+    RegisterAreaTriggerAI(wlp_at_hunter_volatile_bomb);
+    RegisterAuraScript(wlp_spell_hunter_wildfire_infusion_dummy);
+    RegisterSpellScript(wlp_spell_hunter_violent_reaction);
+    RegisterAuraScript(wlp_spell_hunter_shrapnel_bomb_proc);
 
     // Playerscripts
     new PlayerScript_black_arrow();
