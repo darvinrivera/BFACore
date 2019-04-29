@@ -1,8 +1,14 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
 #include "AreaTriggerTemplate.h"
+#include "AreaTrigger.h"
+#include "SpellHistory.h"
 #include "AreaTriggerAI.h"
 #include "the_arcway.h"
+#include <G3D/Vector3.h>
+#include <G3D/Triangle.h>
+#include <G3D/Plane.h>
+#include <G3D/CollisionDetection.h>
 
 enum Spells
 {
@@ -441,7 +447,7 @@ class at_arc_fel_fissure : public AreaTriggerEntityScript
                 _borned = false;
                 _activated = false;
                 _timerBorn = 0;
-               // _caster = at->GetCaster();
+                _caster = at->GetCaster();
             }
 
             void OnUnitEnter(Unit* unit) override
@@ -461,7 +467,7 @@ class at_arc_fel_fissure : public AreaTriggerEntityScript
                     _caster->CastSpell(_caster, SPELL_FEL_FISSURE_SPIKE, true);
                     _caster->GetAI()->DoAction(ACTION_RUNE_ACTIVATED);
                     _caster->CastSpell(_caster, SPELL_FEL_ERUPTION, true);
-                    //at->Remove();
+                    at->Remove();
                 }
             }
 
@@ -529,6 +535,87 @@ class at_arc_wake_of_shadow : public AreaTriggerEntityScript
         }
 };
 
+class at_arc_shadow_slash : public AreaTriggerEntityScript
+{
+    public:
+        at_arc_shadow_slash() : AreaTriggerEntityScript("at_arc_shadow_slash")
+        {}
+
+        struct at_arc_shadow_slash_AI : public AreaTriggerAI
+        {
+            at_arc_shadow_slash_AI(AreaTrigger* at) : AreaTriggerAI(at)
+            {
+                _timerWay = 0;
+            }
+
+            void SetupSpline()
+            {
+                if (!at->GetCaster())
+                    return;
+
+                std::vector<G3D::Vector3> points;
+                float dist = 100.f;
+
+                G3D::Vector3 src = { at->GetPositionX(), at->GetPositionY(), at->GetPositionZ() };
+                G3D::Vector3 tgt;
+
+                tgt.x = src.x + (dist * cosf(at->GetOrientation()));
+                tgt.y = src.y + (dist * sinf(at->GetOrientation()));
+                tgt.z = src.z;
+
+                float dx = (tgt.x - src.x);
+                float dy = (tgt.y - src.y);
+                float dz = (tgt.z - src.z);
+
+                for (uint32 i = 0; i < 100; ++i)
+                {
+                    src.x += (dx/dist);
+                    src.y += (dy/dist);
+
+                    points.push_back(src);
+                }
+
+                at->InitSplines(points, at->GetDuration() * 0.8f);
+            }
+
+            void OnInitialize() override
+            {
+                SetupSpline();
+            }
+
+            void OnUpdate(uint32 diff) override
+            {
+                _timerWay += diff;
+
+                if (_timerWay >= 1000)
+                {
+                    _timerWay = 0;
+                    at->GetCaster()->GetSpellHistory()->ResetAllCooldowns();
+                    at->GetCaster()->CastSpell(at->GetPositionX(), at->GetPositionY(), at->GetPositionZ(), SPELL_WAKE_OF_SHADOW, true);
+                }
+            }
+
+            void OnUnitEnter(Unit* unit) override
+            {
+                if (!unit)
+                    return;
+                
+                if (unit->GetTypeId() != TYPEID_PLAYER)
+                    return;
+                
+                at->GetCaster()->CastSpell(unit, SPELL_SHADOW_SLASH_DMG, true);
+            }
+
+            private:
+                uint32 _timerWay;
+        };
+
+        AreaTriggerAI* GetAI(AreaTrigger* at) const override
+        {
+            return new at_arc_shadow_slash_AI(at);
+        }
+};
+
 void AddSC_boss_general_xakal()
 {
     new boss_general_xakal();
@@ -538,4 +625,5 @@ void AddSC_boss_general_xakal()
     new spell_arc_bombardment();
     new at_arc_wake_of_shadow();
     new at_arc_fel_fissure();
+    new at_arc_shadow_slash();
 }

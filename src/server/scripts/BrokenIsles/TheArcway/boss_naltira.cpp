@@ -2,6 +2,7 @@
 #include "ScriptedCreature.h"
 #include "the_arcway.h"
 #include "AreaTrigger.h"
+#include "SpellHistory.h"
 #include "AreaTriggerAI.h"
 #include "Vehicle.h"
 
@@ -140,7 +141,7 @@ class boss_naltira : public CreatureScript
 
             void ExecuteEvent(uint32 eventId) override
             {
-          //    me->GetSpellHistory()->ResetAllCooldowns();
+                me->GetSpellHistory()->ResetAllCooldowns();
                 switch (eventId)
                 {
                     case EVENT_MANAFANG:

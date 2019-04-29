@@ -2,9 +2,18 @@
 #include "ScriptedCreature.h"
 #include "AreaTrigger.h"
 #include "AreaTriggerAI.h"
+#include "SpellAuraEffects.h"
 #include "the_arcway.h"
 #include "AreaTriggerTemplate.h"
 #include "G3D/LineSegment.h"
+#include "SmartAI.h"
+#include "Player.h"
+#include "SpellHistory.h"
+#include "Spell.h"
+#include "Creature.h"
+#include "SpellScript.h"
+#include "SpellAuras.h"
+#include "Player.h"
 
 enum Spells
 {
@@ -89,11 +98,11 @@ class boss_ivanyr : public CreatureScript
                 if (!at)
                     return;
 
-             // auto & vertices = at->_polygonVertices;
+               // auto & vertices = at->_polygonVertices;
                 uint8 index = 0;
 
-            //  for (auto & it :  vertices)
-           //       it = _vertexs.at(index++);
+                //for (auto & it :  vertices)
+                   // it = _vertexs.at(index++);
             }
 
             void SetGUID(ObjectGuid guid, int32 id) override
@@ -220,7 +229,7 @@ class boss_ivanyr : public CreatureScript
                 {
                     Spell* currSpell = me->GetCurrentSpell(CURRENT_CHANNELED_SPELL);
 
-                 // if (currSpell && currSpell->GetSpellInfo()->Id == SPELL_OVERCHARGE_MANA)
+                    if (currSpell && currSpell->GetSpellInfo()->Id == SPELL_OVERCHARGE_MANA)
                     {
                         me->CastStop();
                         DoAction(ACTION_INTERRUPT_OVERCHARGE);
@@ -243,7 +252,7 @@ class boss_ivanyr : public CreatureScript
 
             void ExecuteEvent(uint32 eventId) override
             {
-           //   me->GetSpellHistory()->ResetAllCooldowns();
+                me->GetSpellHistory()->ResetAllCooldowns();
                 switch (eventId)
                 {
                     case EVENT_ARCANE_BLAST:
@@ -337,7 +346,7 @@ class spell_ivanyr_nether_link : public SpellScriptLoader
                             
                         GetCaster()->AddAura(SPELL_NETHER_LINK_VISUAL, ptr);
                         G3D::Vector3 pos = { ptr->GetPositionX(), ptr->GetPositionY(), ptr->GetPositionZ() };
-                     // ptr->SendPlaySpellVisual(pos, 39597, 0, 0, 34, false);
+                        //ptr->SendPlaySpellVisual(pos, 39597, 0, 0, 34, false);
 
                         switch (_playerCounter++)
                         {
@@ -429,8 +438,8 @@ class spell_ivanyr_overcharge_mana : public SpellScriptLoader
                         return;
 
                     if (AuraEffect* auraEff = GetUnitOwner()->GetAuraEffect(SPELL_CHARGED_BOLT_AURA, EFFECT_0))
-                  //    auraEff->SetPeriodicTimer(auraEff->GetPeriodicTimer() > 250 ? auraEff->GetPeriodicTimer() - 250 : 250);
-                  //else
+                        auraEff->SetPeriodicTimer(auraEff->GetPeriodicTimer() > 250 ? auraEff->GetPeriodicTimer() - 250 : 250);
+                    else
                         GetUnitOwner()->CastSpell(GetUnitOwner(), SPELL_CHARGED_BOLT_AURA, true);
 
                     if (auto* ptr = GetCaster()->ToCreature())

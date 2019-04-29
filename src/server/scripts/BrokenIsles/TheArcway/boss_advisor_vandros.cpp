@@ -1,5 +1,6 @@
 #include "ScriptMgr.h"
 #include "ScriptedCreature.h"
+#include "AreaTrigger.h"
 #include "AreaTriggerTemplate.h"
 #include "AreaTriggerAI.h"
 #include "the_arcway.h"
@@ -279,7 +280,7 @@ class npc_arc_timeless_wraith : public CreatureScript
 
             void Reset()
             {
-              //me->SetInPhase(2, true, true);
+                //me->SetInPhase(2, true, true);
                 _events.Reset();
             }
 
@@ -430,7 +431,7 @@ class spell_vandros_banish_in_time : public SpellScriptLoader
                             player->CastSpell(player, SPELL_BANISH_IN_TIME_AURA, true);
                     }
 
-                 //GetCaster()->SetInPhase(2, true, true);
+                    //GetCaster()->SetInPhase(2, true, true);
                 }
 
                 void Register() override
@@ -453,7 +454,7 @@ class spell_vandros_banish_in_time : public SpellScriptLoader
                         if (instance)
                             instance->DoCastSpellOnPlayers(SPELL_LOST_IN_TIME);
                     }
-                 // GetCaster()->SetInPhase(2, true, false);
+                    //GetCaster()->SetInPhase(2, true, false);
                 }
 
                 void Register() override
@@ -491,7 +492,7 @@ class spell_vandros_banish_in_time_buff : public SpellScriptLoader
                         return;
                     
                     GetUnitOwner()->CastSpell(GetUnitOwner(), SPELL_BANISH_IN_TIME_TELE, true);
-                //  GetUnitOwner()->SetInPhase(2, true, true);
+                    //GetUnitOwner()->SetInPhase(2, true, true);
                 }
 
                 void HandleOnRemove(AuraEffect const* /**/, AuraEffectHandleModes /**/)
@@ -499,7 +500,7 @@ class spell_vandros_banish_in_time_buff : public SpellScriptLoader
                     if (!GetUnitOwner())
                         return;
 
-                 // GetUnitOwner()->SetInPhase(2, true, false);
+                    //GetUnitOwner()->SetInPhase(2, true, false);
                 }
 
                 void Register() override
@@ -599,8 +600,8 @@ class at_arc_force_bomb : public AreaTriggerEntityScript
                 if (_timerForce >= 4000)
                 {
                     _timerForce = 0;
-                //  at->GetCaster()->CastSpell(at->GetPositionX(), at->GetPositionY(), at->GetPositionZ(), SPELL_FORCE_NOVA_AREA, true);
-                //  at->GetCaster()->CastSpell(at->GetPositionX(), at->GetPositionY(), at->GetPositionZ(), SPELL_FORCE_DETONATION, true);
+                    at->GetCaster()->CastSpell(at->GetPositionX(), at->GetPositionY(), at->GetPositionZ(), SPELL_FORCE_NOVA_AREA, true);
+                    at->GetCaster()->CastSpell(at->GetPositionX(), at->GetPositionY(), at->GetPositionZ(), SPELL_FORCE_DETONATION, true);
                 }
             }
 
@@ -614,17 +615,83 @@ class at_arc_force_bomb : public AreaTriggerEntityScript
         }
 };
 
+class at_arc_force_nova : public AreaTriggerEntityScript
+{
+    public:
+        at_arc_force_nova() : AreaTriggerEntityScript("at_arc_force_nova")
+        {}
+
+        struct at_arc_force_nova_AI : public AreaTriggerAI
+        {
+            explicit at_arc_force_nova_AI(AreaTrigger* at) : AreaTriggerAI(at)
+            {
+                _timerForce = 0;
+                _radius = 10.f;
+            }
+
+            void OnUpdate(uint32 diff) override
+            {
+                _timerForce += diff;
+
+                if (_timerForce >= 500)
+                {
+                    _timerForce = 0;
+                    
+                    for (auto & it : at->GetMap()->GetPlayers())
+                    {
+                        Player* ptr = it.GetSource();
+
+                        if (!ptr)
+                            continue;
+                        
+                        float dist = ptr->GetDistance2d(at);
+                        
+                        if (std::fabs(dist - _radius) <= 3.f)
+                            OnUnitEnter(ptr);
+                        else
+                            OnUnitExit(ptr);
+                    }
+                    _radius += 4.f;
+                }
+            }
+            
+            void OnUnitEnter(Unit* target) override
+            {
+                if (target && target->GetTypeId() == TYPEID_PLAYER)
+                {
+                    float dist = target->GetDistance2d(at);
+                    target->CastSpell(target, SPELL_FORCE_NOVA_DMG, true);
+                }
+            }
+
+            void OnUnitExit(Unit* target) override
+            {
+                if (target && target->GetTypeId() == TYPEID_PLAYER)
+                    target->RemoveAurasDueToSpell(SPELL_FORCE_NOVA_DMG);
+            }
+
+            private:
+                uint32 _timerForce;
+                float _radius;
+        };
+
+        AreaTriggerAI* GetAI(AreaTrigger* at) const override
+        {
+            return new at_arc_force_nova_AI(at);
+        }
+};
+
 void AddSC_boss_advisor_vandros()
 {
     new boss_advisor_vandros();
     new npc_arc_chrono_shard();
     new npc_arc_timeless_wraith();
     new at_arc_force_bomb();
-  //new at_arc_force_nova();
+    new at_arc_force_nova();
     new spell_vandros_force_bomb();
     new spell_vandros_banish_in_time();
     new spell_vandros_banish_in_time_buff();
     new spell_vandros_banish_in_time_tele();
     new spell_vandros_unstable_mana();
-
+    new spell_arc_breach();
 }
