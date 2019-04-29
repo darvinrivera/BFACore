@@ -23,6 +23,7 @@
 #include "Common.h"
 #include "Optional.h"
 #include "Position.h"
+#include "AchievementMgr.h"
 #include <map>
 #include <memory>
 #include <set>
