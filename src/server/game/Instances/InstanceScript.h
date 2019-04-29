@@ -24,6 +24,7 @@
 #include "Optional.h"
 #include "DB2Structure.h"
 #include "Position.h"
+#include "AchievementMgr.h"
 #include <map>
 #include <memory>
 #include <set>
