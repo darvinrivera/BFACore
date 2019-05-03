@@ -1,407 +1,9 @@
-update `npc_spellclick_spells` set `cast_flags` = 1 where `npc_entry` in (103658, 103655, 96659, 99732, 99731, 99709);
-update `creature_template` set `npcflag` = 3 where entry = 92980;
-
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=1;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 1, 4446.45, -295.896, -235.339, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=2;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 2, 4456.69, -311.004, -207.667, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=3;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 3, 4460.65, -321.54, -187.735, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=4;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 4, 4454.37, -328.542, -165.568, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=5;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 5, 4447.92, -327.422, -153.965, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=6;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 6, 4448.48, -319.545, -144.887, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=7;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 7, 4454.76, -318.391, -127.121, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=8;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 8, 4455.59, -325.278, -107.721, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=9;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 9, 4449.19, -328.938, -85.2078, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=10;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 10, 4444.79, -325.208, -66.8808, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=11;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 11, 4446.59, -317.991, -27.7739, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=12;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 12, 4451.85, -316.278, -6.79571, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=13;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 13, 4454.85, -320.903, 38.564, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=14;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 14, 4454.28, -324.109, 68.72, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=15;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 15, 4451.35, -326.188, 91.9784, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=16;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 16, 4451.14, -327.823, 136.227, NULL);
-DELETE FROM `script_waypoint` WHERE `entry`=99443 AND `pointid`=17;
-INSERT INTO `script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `point_comment`) VALUES (99443, 17, 4451.24, -351.073, 129.361, NULL);
-
-DELETE FROM `waypoints` WHERE `entry`=92718 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (92718, 1, 4325.83, -585.576, -281.745, '4325.832 Y: -585.5758 Z: -281.7451');
-DELETE FROM `waypoints` WHERE `entry`=92718 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (92718, 2, 4325.83, -582.826, -281.495, '4325.832 Y: -582.8258 Z: -281.4951');
-DELETE FROM `waypoints` WHERE `entry`=92718 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (92718, 3, 4325.83, -582.826, -281.495, '4325.832 Y: -582.8258 Z: -281.4951');
-DELETE FROM `waypoints` WHERE `entry`=92718 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (92718, 4, 4325.83, -579.576, -281.495, '4325.832 Y: -582.8258 Z: -281.4951');
-DELETE FROM `waypoints` WHERE `entry`=92718 AND `pointid`=5;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (92718, 5, 4325.83, -576.826, -281.495, '4325.832 Y: -582.8258 Z: -281.4951');
-
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 1, 4446.45, -295.896, -235.339, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 2, 4456.69, -311.004, -207.667, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 3, 4460.65, -321.54, -187.735, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 4, 4454.37, -328.542, -165.568, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=5;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 5, 4447.92, -327.422, -153.965, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=6;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 6, 4448.48, -319.545, -144.887, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=7;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 7, 4454.76, -318.391, -127.121, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=8;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 8, 4455.59, -325.278, -107.721, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=9;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 9, 4449.19, -328.938, -85.2078, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=10;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 10, 4444.79, -325.208, -66.8808, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=11;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 11, 4446.59, -317.991, -27.7739, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=12;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 12, 4451.85, -316.278, -6.79571, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=13;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 13, 4454.85, -320.903, 38.564, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=14;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 14, 4454.28, -324.109, 68.72, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=15;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 15, 4451.35, -326.188, 91.9784, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=16;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 16, 4451.14, -327.823, 136.227, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99443 AND `pointid`=17;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99443, 17, 4451.24, -351.073, 129.361, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 1, 4337.47, -590.45, -281.415, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 2, 4336.72, -590.7, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 3, 4334.97, -590.95, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 4, 4333.97, -590.95, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=5;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 5, 4332.72, -590.7, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=6;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 6, 4331.97, -590.2, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=7;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 7, 4331.97, -589.45, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99631 AND `pointid`=8;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99631, 8, 4332.22, -588.95, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 1, 4315.13, -590.317, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 2, 4316.88, -590.817, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 3, 4317.88, -590.817, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 4, 4318.88, -590.816, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=5;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 5, 4319.63, -590.067, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=6;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 6, 4320.13, -589.317, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=99632 AND `pointid`=7;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (99632, 7, 4319.88, -588.817, -281.665, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 1, 4331.29, -587.508, -281.862, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 2, 4331.29, -586.508, -281.862, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 3, 4331.29, -585.758, -281.862, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 4, 4331.04, -584.758, -281.862, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=5;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 5, 4330.54, -584.258, -281.862, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963100 AND `pointid`=6;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963100, 6, 4328.46, -583.66, -281.729, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963101 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963101, 1, 4330.08, -548.288, -281.75, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963200 AND `pointid`=1;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963200, 1, 4319.15, -586.838, -281.673, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963200 AND `pointid`=2;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963200, 2, 4320.9, -586.338, -281.673, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963200 AND `pointid`=3;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963200, 3, 4321.9, -585.088, -281.673, NULL);
-DELETE FROM `waypoints` WHERE `entry`=9963200 AND `pointid`=4;
-INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES (9963200, 4, 4323.64, -583.668, -281.753, NULL);
-
-DELETE FROM `spell_linked_spell` WHERE `spell_trigger`=133511 AND `spell_effect`=133509 AND `type`=0;
-INSERT INTO `spell_linked_spell` (`spell_trigger`, `spell_effect`, `type`, `comment`) VALUES (133511, 133509, 0, 'Make the bar go up');
-
-update `creature_template` set `KillCredit1` = 106241 where `entry` = 92290;
-update `creature_template` set `KillCredit1` = 106241 where `entry` = 97632;
-
-update `creature_template` set `VehicleId` = 4372 where `entry` = 99443;
-update `creature_template` set `ScriptName` = "npc_vault_of_the_wardens_vampiric_felbat" where `entry` = 99443;
-update `creature_template` set `KillCredit1` = 106254 where `entry` = 96682;
-
-update `gameobject` set `state` = 1 where `id` = 244588;
-update `creature` set `npcflag` = 3 where `guid` = 20542908;
-update `creature_template` set `InhabitType` = 4 where `entry` = 99443;
-update `creature_template` set `speed_walk` = 7.5 where `entry` = 99443;
-update `creature_template` set `speed_run` = 7.5 where `entry` = 99443;
-
--- Maiev Shadowsong 92718 SAI
-SET @ENTRY := 92718;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,19,0,100,0,38672,0,0,0,1,0,0,0,0,0,0,7,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Quest '' Taken - Say Line 0"),
-(@ENTRY,0,1,0,61,0,100,0,0,0,0,0,53,1,92718,0,0,0,0,1,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Quest Taken - Start Waypoint"),
-(@ENTRY,0,2,0,58,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Waypoint Finished - Despawn Instant"),
-(@ENTRY,0,3,0,19,0,100,0,40253,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Quest '' Taken - Run Script"),
-(@ENTRY,0,4,0,19,0,100,0,38723,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Quest '' Taken - Run Script");
-
--- Actionlist SAI
-SET @ENTRY := 9271800;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,0,0,0,0,85,223661,0,0,0,0,0,7,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Script - Invoker Cast 'Spell Id223661'"),
-(@ENTRY,9,1,0,0,0,100,0,0,0,0,0,85,187864,0,0,0,0,0,7,0,0,0,0,0,0,0,"Maiev Shadowsong 92718 - On Script - Invoker Cast 'Spell Id187864'"),
-(@ENTRY,9,2,0,0,0,100,0,100000,100000,0,0,62,1468,0,0,0,0,0,7,0,0,0,4084.27,-298.11,-282.07,3.11803,"Maiev Shadowsong 92718 - On Script - Teleport");
-
--- Kayn's Cell 103658 SAI
-SET @ENTRY := 103658;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,11,0,100,0,0,0,0,0,82,16777216,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Respawn - Add Npc Flag Spellclick"),
-(@ENTRY,0,1,2,73,0,100,0,0,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Spellclick - Run Script"),
-(@ENTRY,0,2,0,61,0,100,0,0,0,0,0,64,1,0,0,0,0,0,7,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Spellclick - Store Targetlist"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,128,0,1,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Respawn");
-
--- Actionlist SAI
-SET @ENTRY := 10365800;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,1000,1000,0,0,128,3761,1,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Script"),
-(@ENTRY,9,1,0,0,0,100,0,2000,2000,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Script - Despawn Instant"),
-(@ENTRY,9,2,0,0,0,100,0,0,0,0,0,45,0,1,0,0,0,0,19,99631,5,0,0,0,0,0,"Kayn's Cell 103658 - On Script - Set Data 0 1"),
-(@ENTRY,9,3,0,0,0,100,0,0,0,0,0,100,1,0,0,0,0,0,19,99631,5,0,0,0,0,0,"Kayn's Cell 103658 - On Script - Send Target 1");
-
--- Kayn Sunfury 99631 SAI
-SET @ENTRY := 99631;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,38,0,100,0,0,1,0,0,53,0,99631,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Data Set 0 1 - Start Waypoint"),
-(@ENTRY,0,1,0,61,0,100,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Data Set 0 0 - Say Line 0"),
-(@ENTRY,0,2,3,40,0,100,0,8,99631,0,0,17,16,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint 8 Reached - Set Emote State 16"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint 0 Reached - Run Script"),
-(@ENTRY,0,4,6,58,0,100,0,0,@ENTRY*100+00,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint Finished - Despawn Instant"),
-(@ENTRY,0,6,0,61,0,100,0,0,0,0,0,33,99326,0,0,0,0,0,12,1,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint Finished - Quest Credit 'Kill Credit: Reunion Finished - Kayn 99326'"),
-(@ENTRY,0,7,0,38,0,100,0,0,2,0,0,53,1,@ENTRY*100+01,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Data Set 0 2 - Start Waypoint"),
-(@ENTRY,0,8,9,58,0,100,0,0,@ENTRY*100+01,0,0,45,0,1,0,0,0,0,19,92980,10,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint Finished - Set Data 0 1"),
-(@ENTRY,0,9,0,61,0,100,0,0,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Waypoint Finished - Despawn Instant");
-
--- Actionlist SAI
-SET @ENTRY := 9963100;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,2000,2000,0,0,53,0,9963100,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Script - Start Waypoint"),
-(@ENTRY,9,1,0,0,0,100,0,0,0,0,0,17,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Script - Set Emote State 0"),
-(@ENTRY,9,2,0,0,0,100,0,0,0,0,0,33,112276,0,0,0,0,0,12,1,0,0,0,0,0,0,"Kayn Sunfury 99631 - On Script - Quest Credit 'Kill Credit: Kayn Picked up Weapons 112276'");
-
--- Altruis's Cell 103655 SAI
-SET @ENTRY := 103655;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,3,11,0,100,0,0,0,0,0,82,16777216,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Respawn - Add Npc Flag Spellclick"),
-(@ENTRY,0,1,2,73,0,100,0,0,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Spellclick - Run Script"),
-(@ENTRY,0,2,0,61,0,100,0,0,0,0,0,64,1,0,0,0,0,0,7,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Spellclick - Store Targetlist"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,128,0,1,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Respawn");
-
--- Actionlist SAI
-SET @ENTRY := 10365500;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,1000,1000,0,0,128,3761,1,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn's Cell 103658 - On Script"),
-(@ENTRY,9,1,0,0,0,100,0,2000,2000,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis's Cell 103655 - On Script - Despawn Instant"),
-(@ENTRY,9,2,0,0,0,100,0,0,0,0,0,45,0,1,0,0,0,0,19,99632,20,0,0,0,0,0,"Altruis's Cell 103655 - On Script - Set Data 0 1"),
-(@ENTRY,9,3,0,0,0,100,0,0,0,0,0,100,1,0,0,0,0,0,19,99632,20,0,0,0,0,0,"Altruis's Cell 103655 - On Script - Send Target 1");
-
--- Altruis the Sufferer 99632 SAI
-SET @ENTRY := 99632;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,38,0,100,0,0,1,0,0,53,0,99632,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Data Set 0 1 - Start Waypoint"),
-(@ENTRY,0,1,5,61,0,100,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Data Set 0 0 - Say Line 0"),
-(@ENTRY,0,2,3,40,0,100,0,7,99632,0,0,17,16,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Waypoint 7 Reached - Set Emote State 16"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Waypoint 0 Reached - Run Script"),
-(@ENTRY,0,4,6,58,0,100,0,0,@ENTRY*100+00,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Waypoint Finished - Despawn Instant"),
-(@ENTRY,0,6,0,61,0,100,0,0,0,0,0,33,112287,0,0,0,0,0,12,1,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Waypoint Finished - Quest Credit 'Kill Credit: Reunion Finished - Altruis 112287'"),
-(@ENTRY,0,7,0,38,0,100,0,0,2,0,0,53,1,@ENTRY*100+01,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Data Set 0 2 - Start Waypoint"),
-(@ENTRY,0,8,6,58,0,100,0,0,@ENTRY*100+01,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Waypoint Finished - Despawn Instant");
-
--- Actionlist SAI
-SET @ENTRY := 9963200;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,2000,2000,0,0,53,0,9963200,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Script - Start Waypoint"),
-(@ENTRY,9,1,0,0,0,100,0,0,0,0,0,17,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Script - Set Emote State 0"),
-(@ENTRY,9,2,0,0,0,100,0,0,0,0,0,33,112277,0,0,0,0,0,12,1,0,0,0,0,0,0,"Altruis the Sufferer 99632 - On Script - Quest Credit 'Kill Credit: Altruis Picked up Weapons 112277'");
-
--- Lever SAI
-SET @ENTRY := 244923;
-UPDATE `gameobject_template` SET `AIName`="SmartGameObjectAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=1;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,1,0,1,20,0,100,0,38672,0,0,0,45,0,2,0,0,0,0,10,20542674,99631,0,0,0,0,0,"Lever - On Quest '' Finished - Set Data 0 2"),
-(@ENTRY,1,1,0,61,0,100,0,0,0,0,0,45,0,2,0,0,0,0,10,20542658,99632,0,0,0,0,0,"Lever - On Quest Finished - Set Data 0 2");
-
--- Kayn Sunfury 92980 SAI
-SET @ENTRY := 92980;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,38,0,100,0,0,1,0,0,80,0,@ENTRY*100+00,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92980 - On Data Set 0 1 - Run Script");
-
--- Actionlist SAI
-SET @ENTRY := 9298000;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92980 - On Script - Say Line 0"),
-(@ENTRY,9,1,0,0,0,100,0,2000,2000,0,0,45,0,1,0,0,0,0,19,92986,10,0,0,0,0,0,"Kayn Sunfury 92980 - On Script - Set Data 0 1"),
-(@ENTRY,9,2,0,0,0,100,0,2000,2000,0,0,45,0,1,0,0,0,0,19,96847,20,0,0,0,0,0,"Kayn Sunfury 92980 - On Script - Set Data 0 1");
-
--- Altruis the Sufferer 92986 SAI
-SET @ENTRY := 92986;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,2,19,0,100,0,38689,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92986 - On Quest '' Taken - Say Line 1"),
-(@ENTRY,0,1,0,38,0,100,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92986 - On Data Set 0 1 - Say Line 0"),
-(@ENTRY,0,2,0,61,0,100,0,0,0,0,0,85,133508,0,0,0,0,0,7,0,0,0,0,0,0,0,"Altruis the Sufferer 92986 - On Quest Taken - Invoker Cast 'Spell Id133508'"),
-(@ENTRY,0,3,0,20,0,100,0,38689,0,0,0,85,133510,0,0,0,0,0,16,0,0,0,0,0,0,0,"Altruis the Sufferer 92986 - On Quest '' Finished - Invoker Cast 'Spell Id133510'");
-
--- Drelanim Whisperwind 96847 SAI
-SET @ENTRY := 96847;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,38,0,100,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Drelanim Whisperwind 96847 - On Data Set 0 1 - Say Line 0");
-
--- hackfix i got no idea how to trigger the quest credit else
--- Fel Shocktrooper 92776 SAI
-SET @ENTRY := 92776;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,3,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,4,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,5,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,6,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,7,0,32,0,50,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,8,0,32,0,60,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,9,0,32,0,70,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,10,0,32,0,80,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'");
-
--- Savage Felstalker 92782 SAI
-SET @ENTRY := 92782;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,3,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,4,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,5,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,6,0,32,0,100,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,7,0,32,0,50,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,8,0,32,0,60,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,9,0,32,0,70,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'"),
-(@ENTRY,0,10,0,32,0,80,0,0,0,0,0,85,133511,66,0,0,0,0,7,0,0,0,0,0,0,0,"Fel Shocktrooper 92776 - On Damaged Between 0-0 - Invoker Cast 'Spell Id133511'");
-
--- Kayn Sunfury 92984 SAI
-SET @ENTRY := 92984;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,38,0,100,0,0,1,0,0,19,33344,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92984 - On Data Set 0 1 - Remove Flag Immune To NPC's"),
-(@ENTRY,0,1,3,61,0,100,0,0,0,0,0,2,2804,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92984 - On Data Set 0 0 - Set Faction 2804"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,49,0,0,0,0,0,0,19,92990,20,0,0,0,0,0,"Kayn Sunfury 92984 - On Data Set 0 0 - Start Attacking"),
-(@ENTRY,0,4,0,38,0,100,0,0,2,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92984 - On Data Set 0 2 - Run Script"),
-(@ENTRY,0,5,0,34,0,100,0,8,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Kayn Sunfury 92984 - On Reached Point 0 - Despawn Instant");
-
--- Actionlist SAI
-SET @ENTRY := 9298400;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,5000,5000,0,0,69,0,0,0,0,0,0,10,20542908,92984,0,0,0,0,0,"Kayn Sunfury 92984 - On Script - Move To Closest Creature 'Kayn Sunfury'");
-
--- Altruis the Sufferer 92985 SAI
-SET @ENTRY := 92985;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,38,0,100,0,0,1,0,0,19,33344,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92985 - On Data Set 0 1 - Remove Flag Immune To NPC's"),
-(@ENTRY,0,1,3,61,0,100,0,0,0,0,0,2,2804,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92985 - On Data Set 0 0 - Set Faction 2804"),
-(@ENTRY,0,2,0,11,0,100,0,0,0,0,0,81,3,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92985 - On Respawn - Set Npc Flags Gossip & Questgiver"),
-(@ENTRY,0,3,0,61,0,100,0,0,0,0,0,49,0,0,0,0,0,0,19,97632,20,0,0,0,0,0,"Altruis the Sufferer 92985 - On Data Set 0 0 - Start Attacking"),
-(@ENTRY,0,4,0,38,0,100,0,0,2,0,0,80,@ENTRY*100+00,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92985 - On Data Set 0 2 - Run Script"),
-(@ENTRY,0,5,0,34,0,100,0,8,0,0,0,41,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"Altruis the Sufferer 92985 - On Reached Point 0 - Despawn Instant");
-
--- Sledge 92990 SAI
-SET @ENTRY := 92990;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,1,4,0,100,0,0,0,0,0,45,0,1,0,0,0,0,10,20542913,92984,0,0,0,0,0,"Sledge 92990 - On Aggro - Set Data 0 1"),
-(@ENTRY,0,1,0,61,0,100,0,0,0,0,0,45,0,1,0,0,0,0,10,20542914,92985,0,0,0,0,0,"Sledge 92990 - On Aggro - Set Data 0 1"),
-(@ENTRY,0,2,3,4,0,100,0,0,0,0,0,64,1,0,0,0,0,0,7,0,0,0,0,0,0,0,"Sledge 92990 - On Aggro - Store Targetlist"),
-(@ENTRY,0,3,4,61,0,100,0,0,0,0,0,100,1,0,0,0,0,0,19,97632,20,0,0,0,0,0,"Sledge 92990 - On Aggro - Send Target 1"),
-(@ENTRY,0,4,0,61,0,100,0,0,0,0,0,45,0,1,0,0,0,0,19,97632,20,0,0,0,0,0,"Sledge 92990 - On Aggro - Set Data 0 1"),
-(@ENTRY,0,5,6,6,0,100,0,0,0,0,0,45,0,2,0,0,0,0,10,20542913,92984,0,0,0,0,0,"Sledge 92990 - On Just Died - Set Data 0 2"),
-(@ENTRY,0,6,0,61,0,100,0,0,0,0,0,45,0,2,0,0,0,0,10,20542914,92985,0,0,0,0,0,"Sledge 92990 - On Just Died - Set Data 0 2");
-
--- Actionlist SAI
-SET @ENTRY := 9298500;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=9;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,9,0,0,0,0,100,0,5000,5000,0,0,69,0,0,0,0,0,0,10,20542909,92985,0,0,0,0,0,"Altruis the Sufferer 92985 - On Script - Move To Closest Creature 'Altruis the Sufferer'");
-
--- Crusher 97632 SAI
-SET @ENTRY := 97632;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,38,0,100,0,0,1,0,0,49,0,0,0,0,0,0,12,1,0,0,0,0,0,0,"Crusher 97632 - On Data Set 0 1 - Start Attacking");
-
--- Countermeasures 99732 SAI
-SET @ENTRY := 99732;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,8,0,100,0,204588,0,0,0,33,99732,0,0,0,0,0,7,0,0,0,0,0,0,0,"Countermeasures 99709 - On Spellhit 'Spell Id204588' - Quest Credit 'Countermeasures 99709'");
-
--- Countermeasures 99731 SAI
-SET @ENTRY := 99731;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,8,0,100,0,204588,0,0,0,33,99731,0,0,0,0,0,7,0,0,0,0,0,0,0,"Countermeasures 99709 - On Spellhit 'Spell Id204588' - Quest Credit 'Countermeasures 99709'");
-
--- Countermeasures 99709 SAI
-SET @ENTRY := 99709;
-UPDATE `creature_template` SET `AIName`="SmartAI" WHERE `entry`=@ENTRY;
-DELETE FROM `smart_scripts` WHERE `entryorguid`=@ENTRY AND `source_type`=0;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`comment`) VALUES
-(@ENTRY,0,0,0,8,0,100,0,204588,0,0,0,33,99709,0,0,0,0,0,7,0,0,0,0,0,0,0,"Countermeasures 99709 - On Spellhit 'Spell Id204588' - Quest Credit 'Countermeasures 99709'");
-
+-- Quest id: 38727 - "Stop the Bombardment" - Add missing banner
 DELETE FROM `gameobject` WHERE `guid` = 20375675;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `PhaseId`, `PhaseGroup`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `VerifiedBuild`) VALUES
 (20375675, 243965, 1481, 7705, 7747, 0, 0, 0, 1813.36, 1543.43, 88.3732, 5.74205, 0, 0, 0.267278, -0.963619, 7200, 255, 1, 22423);
 
-DELETE FROM `creature_queststarter` WHERE `id` IN (92718, 92980, 92986, 92984, 97643, 96675, 97644, 97978, 97296, 114562);
+DELETE FROM `creature_queststarter` WHERE `id` IN (92718, 92980, 92986, 92984, 97643, 96675, 97644, 97978, 97296, 114562, 116704, 99254, 102585, 107574);
 INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES  
 (92718, 38672), -- breaking out
 (92980, 38690), -- rise of the illidari
@@ -422,7 +24,17 @@ INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES
 (97978, 39689), -- Illidari we are leaving (A)
 (97978, 39690), -- Illidari we are leaving (H)
 (97296, 40976), -- Audience with Warchief
-(114562, 44663); -- Blink of an Eye
+(97296, 39691), -- The Call of War
+(114562, 44663), -- Blink of an Eye
+(116704, 39047), -- call of the Illidari
+(99254, 40816), -- Power To Survive (Altruis)
+(99254, 41120), -- Making Arrangements
+(99254, 41121), -- By Any Means
+(99254, 41119), -- The Hunt
+(102585, 39691), -- The Call of War
+(102585, 44471), -- Second Sight
+(102585, 44463), -- Demons Among Them
+(107574, 44473); -- A Weapon of the Alliance
 
 DELETE FROM `creature_questender` WHERE `quest` IN (40253, 38723);
 INSERT INTO `creature_questender` (`id`,`quest`) VALUES (92984, 40253), (92984, 38723);
@@ -835,6 +447,30 @@ INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `positi
 (9298000, 3, 4328.747, -518.079, -287.721, 'Kayn move'),
 (9298000, 4, 4332.642, -506.923, -288.638, 'Kayn Despawn');
 
+UPDATE `creature_template` SET `minlevel`=99, `maxlevel`=99, `faction`=2395, `BaseAttackTime`=2000, `RangeAttackTime`=2000, `unit_flags`=33587720, `unit_flags2`=2048, `VehicleId`=4197, `MovementId` = 150, `AIName`='SmartAI', `InhabitType`=4 WHERE `entry`=99443;
+DELETE FROM `smart_scripts` WHERE `entryorguid`=99443 AND `source_type`=0;
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
+(99443, 0, 0, 0, 54, 0, 100, 0, 0, 0, 0, 0, 85, 46598, 2, 0, 0, 0, 0, 1, 0, 0, 0, 4063.51, -296.51, -281.58, 0, 'Vampiric Felbat - Just Spawned - Invoker Cast Ride Vehicle Hardcoded'),
+(99443, 0, 1, 0, 27, 0, 100, 0, 0, 0, 0, 0, 53, 1, 99443, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Vampiric Felbat - Passenger Boarded - Start WP'),
+(99443, 0, 2, 3, 58, 0, 100, 0, 13, 99443, 0, 0, 11, 68576, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Vampiric Felbat - WP Ended - Cast Eject All Passengers'),
+(99443, 0, 3, 0, 61, 0, 100, 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 'Vampiric Felbat - WP Ended - Despawn');
+
+DELETE FROM `waypoints` WHERE `entry`=99443;
+INSERT INTO `waypoints` (`entry`, `pointid`, `position_x`, `position_y`, `position_z`, `point_comment`) VALUES
+(99443, 1, 4435.54, -289.252, -247.127, 'Vampiric Felbat1'),
+(99443, 2, 4445.98, -299.189, -234.631, 'Vampiric Felbat2'),
+(99443, 3, 4450.8, -320.845, -223.82, 'Vampiric Felbat3'),
+(99443, 4, 4450.8, -320.845, -171.81, 'Vampiric Felbat4'),
+(99443, 5, 4451.2, -321.103, -101.486, 'Vampiric Felbat5'),
+(99443, 6, 4451.2, -321.103, -30.4712, 'Vampiric Felbat6'),
+(99443, 7, 4451.2, -321.103, 5.68376, 'Vampiric Felbat7'),
+(99443, 8, 4451.2, -321.103, 42.8748, 'Vampiric Felbat8'),
+(99443, 9, 4451.2, -321.103, 78.3228, 'Vampiric Felbat9'),
+(99443, 10, 4451.2, -321.103, 129.983, 'Vampiric Felbat10'),
+(99443, 11, 4447.17, -323.197, 140.234, 'Vampiric Felbat11'),
+(99443, 12, 4449.52, -341.185, 129.249, 'Vampiric Felbat12'),
+(99443, 13, 4451.74, -359.885, 130.354, 'Vampiric Felbat13 - Despawn');
+
 UPDATE `creature_template` SET `unit_flags`=768, `npcflag`=1 WHERE `entry`=99501;
 DELETE FROM `npc_spellclick_spells` WHERE `npc_entry`=99501;
 INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
@@ -919,15 +555,21 @@ DELETE FROM `creature_text` WHERE `CreatureID`=100636;
 INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `Comment`) VALUES
 (100636,0,0,'I don\'t like the looks of them, mage. They smell of demon filth.',12,0,100,0,0,57915,0,0,'Lord Saurfang to Player');
 
-DELETE FROM `npc_text` WHERE `ID` IN (30560, 30561);
+DELETE FROM `npc_text` WHERE `ID` IN (30560, 30561, 30562, 30563, 30564);
 INSERT INTO `npc_text` (`ID`, `Probability0`, `Probability1`, `Probability2`, `Probability3`, `Probability4`, `Probability5`, `Probability6`, `Probability7`, `BroadcastTextId0`, `BroadcastTextId1`, `BroadcastTextId2`, `BroadcastTextId3`, `BroadcastTextId4`, `BroadcastTextId5`, `BroadcastTextId6`, `BroadcastTextId7`, `VerifiedBuild`) VALUES
 (30560,1,0,0,0,0,0,0,0,147324,0,0,0,0,0,0,0,25549),
-(30561,1,0,0,0,0,0,0,0,147325,0,0,0,0,0,0,0,25549);
+(30561,1,0,0,0,0,0,0,0,147325,0,0,0,0,0,0,0,25549),
+(30562,1,0,0,0,0,0,0,0,147326,0,0,0,0,0,0,0,25549),
+(30563,1,0,0,0,0,0,0,0,147327,0,0,0,0,0,0,0,25549),
+(30564,1,0,0,0,0,0,0,0,147328,0,0,0,0,0,0,0,25549);
 
-DELETE FROM `gossip_menu` WHERE `MenuID` IN (20460, 20461);
+DELETE FROM `gossip_menu` WHERE `MenuID` IN (20460, 20461, 20462, 20463);
 INSERT INTO `gossip_menu` (`MenuID`, `TextID`) VALUES
 (20460, 30560),
-(20461, 30561);
+(20461, 30561),
+(20462, 30562),
+(20463, 30563),
+(20464, 30564);
 
 UPDATE `creature_template` SET `minlevel`=100, `maxlevel`=100, `gossip_menu_id`=20460 WHERE `entry`=100636;
 UPDATE `creature_template` SET `gossip_menu_id`=20461 WHERE `entry`=101035;
@@ -975,5 +617,296 @@ UPDATE `creature_template` SET `faction` = '1786' WHERE `entry` = '102543';
 UPDATE `creature_template` SET `unit_flags2` = '35653632' WHERE `entry` = '102543';
 UPDATE `creature_template` SET `HealthScalingExpansion` = '5' , `lootid` = '98486' , `HealthModifier` = '1' WHERE `entry` = '102543';
 UPDATE `scene_template` SET `ScriptName`='scene_demons_among_them_horde' WHERE `SceneId`=1453;
-UPDATE `creature_template` SET `npcflag` = 2 WHERE `entry`=114562; 
+UPDATE `creature_template` SET `npcflag` = 2 WHERE `entry`=114562;
 
+DELETE FROM `creature_text` WHERE `CreatureID` = 116704;
+INSERT INTO `creature_text` (`CreatureID`, `GroupID`, `ID`, `Text`, `Type`, `Language`, `Probability`, `Emote`, `Duration`, `Sound`, `BroadcastTextId`, `TextRange`, `Comment`) VALUES
+(116704,0,0,'I need to speak with you.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player'),
+(116704,0,1,'Altruis and the others await you at Krasus\' Landing. I\'ll meet you there.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player'),
+(116704,0,2,'Kayn and the others await you at Krasus\' Landing. I\'ll meet you there.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player'),
+(116704,0,3,'Every moment we sit idle, the Legion gains strength.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player'),
+(116704,0,4,'In Lord Illidan\'s absence, you are the ranking member of our order. We can\'t make this decision without you.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player'),
+(116704,0,5,'Let me know when you\'re ready.',12,0,100,0,0,57295,0,0,'Korvas Bloodthorn to Player');
+
+UPDATE `creature_template` SET `npcflag`=2, `AIName`="", `ScriptName`='npc_korvas_bloodthorn_summon', `VerifiedBuild`=25549 WHERE `entry`=116704;
+DELETE FROM `creature_equip_template` WHERE `CreatureID`=116704;
+INSERT INTO `creature_equip_template` (`CreatureID`, `ID`, `ItemID1`, `AppearanceModID1`, `ItemVisual1`, `ItemID2`, `AppearanceModID2`, `ItemVisual2`, `ItemID3`, `AppearanceModID3`, `ItemVisual3`, `VerifiedBuild`) VALUES 
+(116704,1,128359,0,0,128371,0,0,0,0,0,25549);
+
+UPDATE `creature_template` SET `npcflag`=3, `gossip_menu_id`=20463, `ScriptName`='npc_altruis_sufferer_artifact', `VerifiedBuild`=25549 WHERE `entry`=99254;
+
+UPDATE `quest_template_addon` SET `PrevQuestID`=39047 WHERE `ID`=40816; -- The Power To Survive (Altruis)
+UPDATE `quest_template_addon` SET `PrevQuestID`=39261 WHERE `ID`=40814; -- The Power To Survive (Kayn)
+UPDATE `quest_template_addon` SET `PrevQuestID`=41120 WHERE `ID`=41121; -- By Any Means
+UPDATE `quest_template_addon` SET `PrevQuestID`=41121 WHERE `ID`=41119; -- The Hunt
+
+UPDATE `quest_template_addon` SET `PrevQuestID`=39689 WHERE `ID`=39691; -- The Call Of War
+UPDATE `quest_template_addon` SET `PrevQuestID`=39691 WHERE `ID`=44471; -- Second Sight
+UPDATE `quest_template_addon` SET `PrevQuestID`=44471 WHERE `ID`=44463; -- Demons Among Them
+UPDATE `quest_template_addon` SET `PrevQuestID`=44463 WHERE `ID`=44473; -- A Weapon of the Alliance
+
+DELETE FROM `playerchoice_response` WHERE `ChoiceId`=255;
+INSERT INTO `playerchoice_response` (`ChoiceId`, `ResponseId`, `Index`, `ChoiceArtFileId`, `Header`, `Answer`, `Description`, `Confirmation`, `QuestId`, `VerifiedBuild`) VALUES
+(255, 640, 2, 0, 'Vengeance', 'Select', 'The mighty Aldrachi were one of the few to stand against the Burning Legion. It took Sargeras to fell their greatest champion, seizing his warblades in the process. Now the traitorous Illidari Carla, servant of Kil\'Jaeden, wields the infamous warblades. The more souls she claims, the more powerful she becomes.\n\n            |cFF000000|Hitem:128832|h[Aldrachi Warblades]|h|r', 'CONFIRM_ARTIFACT_CHOICE', 40818, 25549),
+(255, 641, 1, 0, 'Havoc', 'Select', 'These glaives belong to the former demon hunter Varedis Felsoul, who was slain defending the Black Temple many years ago. The Burning Legion\'s master, Kil\'jaeden the Deceiver, raised Varedis in the Twisting Nether and imbued his glaives with a piece of the demon lord\'s chaotic power.\n\n            |cFF000000|Hitem:127829|h[Twinblades of the Deceiver]|h|r', 'CONFIRM_ARTIFACT_CHOICE', 40817, 25549);
+
+DELETE FROM `spell_target_position` WHERE `ID`=192757;
+INSERT INTO `spell_target_position` (`ID`, `EffectIndex`, `MapID`, `PositionX`, `PositionY`, `PositionZ`, `VerifiedBuild`) VALUES
+(192757, 0, 0, -8544.392578, 462.887299, 104.472054, 22566);
+
+-- Delete Reward From Artifact Quests (Temporarly, only for the implemented ones)
+UPDATE `quest_template` SET `RewardAmount1` = 0 WHERE `ID` IN (40817, 40818);
+
+DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=19 AND `SourceEntry` IN (41120,41803);
+INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
+(19,0,41120,0,0,14,0,40818,0,0,0,0,0,"","Quest 'Making Arrangements' can only be taken if quest 'Aldrachi Warblades Chosen' is not taken"),
+(19,0,41803,0,0,28,0,40817,0,0,1,0,0,"","Quest 'Asking A Favor' can only be taken if quest 'Twinblades of the Deceiver Chosen' is not completed");
+
+DELETE FROM `creature` WHERE `guid` BETWEEN 280000321 AND 280000353;
+INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES
+(280000321,97296,0,1519,5390,0,0,175,0,-1,0,1,-8540.17,462.07,104.71,5.338177,120,0,0,9145554,5,0,2,0,0,0,0,'',25549), -- Khadgar
+(280000322,102585,0,1519,6292,0,0,175,0,-1,0,1,-8386.70,256.77,155.34,5.436349,120,0,0,9145554,5,0,2,0,0,0,0,'npc_stormwind_jace',25549), -- Jace
+(280000323,100472,0,1519,6292,0,0,175,0,-1,0,1,-8381.91,244.14,155.34,0.280596,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Aysa
+(280000324,100471,0,1519,6292,0,0,175,0,-1,0,1,-8379.27,242.71,155.34,0.622245,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Gelbin
+(280000325,109486,0,1519,6292,0,0,175,0,-1,0,1,-8375.32,239.37,155.34,0.775397,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Tyrande
+(280000326,100977,0,1519,6292,0,0,175,0,-1,0,1,-8377.92,239.36,155.34,0.912056,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Malfurion
+(280000327,100981,0,1519,6292,0,0,175,0,-1,0,1,-8367.53,245.38,155.34,3.007499,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Velen
+(280000328,100454,0,1519,6292,0,0,175,0,-1,0,1,-8367.77,248.74,155.34,3.545497,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Muradin
+(280000329,100456,0,1519,6292,0,0,175,0,-1,0,1,-8370.12,252.73,155.34,3.973544,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Falstad
+(280000330,100455,0,1519,6292,0,0,175,0,-1,0,1,-8369.41,251.05,155.34,3.863588,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Moira
+(280000331,107574,0,1519,6292,0,0,175,0,-1,0,1,-8363.29,232.547,157.073,2.2498,120,0,0,0,0,0,3,0,0,0,0,'',25549), -- Anduinn
+(280000332,1756,0,1519,6292,0,0,175,0,-1,0,1,-8378.942,245.530,155.346,0.296706,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000333,1756,0,1519,6292,0,0,175,0,-1,0,1,-8376.486,242.281,155.347,1.069136,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000334,1756,0,1519,6292,0,0,175,0,-1,0,1,-8372.619,250.486,155.347,4.322258,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000335,1756,0,1519,6292,0,0,175,0,-1,0,1,-8370.068,247.454,155.347,3.368001,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000336,1756,0,1519,6292,0,0,175,0,-1,0,1,-8376.370,227.001,155.346,1.480863,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000337,1756,0,1519,6292,0,0,175,0,-1,0,1,-8354.978,243.959,155.346,2.984727,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000338,1756,0,1519,6292,0,0,175,0,-1,0,1,-8351.978,263.628,155.346,3.785607,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000339,1756,0,1519,6292,0,0,175,0,-1,0,1,-8371.314,268.122,155.346,4.527806,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000340,1756,0,1519,6292,0,0,175,0,-1,0,1,-8391.776,260.688,155.346,0.644793,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000341,1756,0,1519,6292,0,0,175,0,-1,0,1,-8384.391,266.399,155.346,3.773996,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000342,1756,0,1519,6292,0,0,175,0,-1,0,1,-8389.442,275.248,153.785,3.776624,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000343,1756,0,1519,6292,0,0,175,0,-1,0,1,-8391.933,278.380,152.785,3.773483,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000344,1756,0,1519,6292,0,0,175,0,-1,0,1,-8399.149,267.668,153.758,0.647596,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000345,1756,0,1519,6292,0,0,175,0,-1,0,1,-8401.752,270.572,152.784,0.646025,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000346,1756,0,1519,6292,0,0,175,0,-1,0,1,-8399.689,288.385,149.621,3.792332,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000347,1756,0,1519,6292,0,0,175,0,-1,0,1,-8402.229,291.475,148.621,3.775838,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000348,1756,0,1519,6292,0,0,175,0,-1,0,1,-8409.517,280.654,149.604,0.663304,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000349,1756,0,1519,6292,0,0,175,0,-1,0,1,-8412.028,283.738,148.610,0.657021,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000350,1756,0,1519,6292,0,0,175,0,-1,0,1,-8419.933,293.710,147.014,0.631103,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000351,1756,0,1519,6292,0,0,175,0,-1,0,1,-8422.538,296.917,147.014,0.656236,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000352,1756,0,1519,6292,0,0,175,0,-1,0,1,-8412.601,304.631,147.013,3.801755,120,0,0,0,0,0,0,0,0,0,0,'',25549), -- Guard
+(280000353,1756,0,1519,6292,0,0,175,0,-1,0,1,-8410.082,301.516,147.013,3.797828,120,0,0,0,0,0,0,0,0,0,0,'',25549); -- Guard
+
+DELETE FROM `gameobject` WHERE `guid` BETWEEN 51014100 AND 51014300;
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`, `isActive`, `ScriptName`, `VerifiedBuild`) VALUES
+(51014100,245649,0,1519,6292,0,0,175,0,-1,-8424.86,319.094,145.584,5.60214,0,0,0.33398,-0.94258,120,255,1,0,'',22423),
+(51014101,245649,0,1519,6292,0,0,175,0,-1,-8422.75,318.646,145.758,3.13535,0,0,0.999995,0.00312133,120,255,1,0,'',22423),
+(51014102,245649,0,1519,6292,0,0,175,0,-1,-8434.14,310.514,145.682,4.39963,0,0,0.808605,-0.588352,120,255,1,0,'',22423),
+(51014103,245649,0,1519,6292,0,0,175,0,-1,-8419.82,313.059,146.402,3.0435,0,0,0.998797,0.0490267,120,255,1,0,'',22423),
+(51014104,245649,0,1519,6292,0,0,175,0,-1,-8424.81,316.856,145.77,3.89481,0,0,0.929917,-0.367769,120,255,1,0,'',22423),
+(51014105,245649,0,1519,6292,0,0,175,0,-1,-8422.27,314.925,146.091,0.504482,0,0,0.249575,0.968356,120,255,1,0,'',22423),
+(51014106,245649,0,1519,6292,0,0,175,0,-1,-8412.63,304.816,147.014,0.112494,0,0,0.0562173,0.998419,120,255,1,0,'',22423),
+(51014107,245649,0,1519,6292,0,0,175,0,-1,-8428.9,304.474,146.513,0.97466,0,0,0.468268,0.883586,120,255,1,0,'',22423),
+(51014108,245649,0,1519,6292,0,0,175,0,-1,-8431.24,309.21,145.975,4.2703,0,0,0.844935,-0.53487,120,255,1,0,'',22423),
+(51014109,245649,0,1519,6292,0,0,175,0,-1,-8430.4,306.788,146.227,3.73291,0,0,0.95661,-0.29137,120,255,1,0,'',22423),
+(51014110,245649,0,1519,6292,0,0,175,0,-1,-8432.66,309.764,145.839,2.48892,0,0,0.947223,0.320575,120,255,1,0,'',22423),
+(51014111,245649,0,1519,6292,0,0,175,0,-1,-8422.14,298.417,147.014,5.30874,0,0,0.468173,-0.883637,120,255,1,0,'',22423),
+(51014112,245649,0,1519,6292,0,0,175,0,-1,-8398.92,286.63,150.085,3.89481,0,0,0.929917,-0.367769,120,255,1,0,'',22423),
+(51014113,245649,0,1519,6292,0,0,175,0,-1,-8420.58,292.592,147.014,1.8064,0,0,0.785312,0.6191,120,255,1,0,'',22423),
+(51014114,245649,0,1519,6292,0,0,175,0,-1,-8401.63,290.179,148.969,0.504482,0,0,0.249575,0.968356,120,255,1,0,'',22423),
+(51014115,245649,0,1519,6292,0,0,175,0,-1,-8392.84,278.464,152.628,2.48892,0,0,0.947223,0.320575,120,255,1,0,'',22423),
+(51014116,245649,0,1519,6292,0,0,175,0,-1,-8408.86,279.29,149.973,3.0435,0,0,0.998797,0.0490267,120,255,1,0,'',22423),
+(51014117,245649,0,1519,6292,0,0,175,0,-1,-8394.32,279.214,152.251,4.39963,0,0,0.808605,-0.588352,120,255,1,0,'',22423),
+(51014118,245649,0,1519,6292,0,0,175,0,-1,-8411.31,281.156,149.228,0.504482,0,0,0.249575,0.968356,120,255,1,0,'',22423),
+(51014119,245649,0,1519,6292,0,0,175,0,-1,-8404.05,292.118,148.212,3.13535,0,0,0.999995,0.00312133,120,255,1,0,'',22423),
+(51014120,245649,0,1519,6292,0,0,175,0,-1,-8413.85,283.087,148.455,3.89481,0,0,0.929917,-0.367769,120,255,1,0,'',22423),
+(51014121,245649,0,1519,6292,0,0,175,0,-1,-8411.79,284.877,148.426,3.13535,0,0,0.999995,0.00312133,120,255,1,0,'',22423),
+(51014122,245649,0,1519,6292,0,0,175,0,-1,-8399.18,288.312,149.714,3.0435,0,0,0.998797,0.0490267,120,255,1,0,'',22423),
+(51014123,245649,0,1519,6292,0,0,175,0,-1,-8410.51,300.832,147.014,2.31972,0,0,0.916747,0.399468,120,255,1,0,'',22423),
+(51014124,245649,0,1519,6292,0,0,175,0,-1,-8390.58,275.488,153.561,3.73291,0,0,0.95661,-0.29137,120,255,1,0,'',22423),
+(51014125,245649,0,1519,6292,0,0,175,0,-1,-8398.22,265.731,154.282,3.89481,0,0,0.929917,-0.367769,120,255,1,0,'',22423),
+(51014126,245649,0,1519,6292,0,0,175,0,-1,-8389.08,273.174,154.248,0.97466,0,0,0.468268,0.883586,120,255,1,0,'',22423),
+(51014127,245649,0,1519,6292,0,0,175,0,-1,-8391.42,277.91,152.957,4.2703,0,0,0.844935,-0.53487,120,255,1,0,'',22423),
+(51014128,245649,0,1519,6292,0,0,175,0,-1,-8400.93,269.28,153.166,0.504482,0,0,0.249575,0.968356,120,255,1,0,'',22423),
+(51014129,245649,0,1519,6292,0,0,175,0,-1,-8403.54,271.962,152.234,3.73291,0,0,0.95661,-0.29137,120,255,1,0,'',22423),
+(51014130,245649,0,1519,6292,0,0,175,0,-1,-8402.04,269.648,152.921,0.97466,0,0,0.468268,0.883586,120,255,1,0,'',22423),
+(51014131,245649,0,1519,6292,0,0,175,0,-1,-8398.49,267.413,153.911,3.0435,0,0,0.998797,0.0490267,120,255,1,0,'',22423),
+(51014132,245649,0,1519,6292,0,0,175,0,-1,-8377.22,246.682,155.347,4.08617,0,0,0.890529,-0.454926,120,255,1,0,'',22423),
+(51014133,245649,0,1519,6292,0,0,175,0,-1,-8376.58,247.361,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014134,245649,0,1519,6292,0,0,175,0,-1,-8374.09,249.707,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014135,245649,0,1519,6292,0,0,175,0,-1,-8375.21,249.154,155.347,1.31395,0,0,0.610724,0.791843,120,255,1,0,'',22423),
+(51014136,245649,0,1519,6292,0,0,175,0,-1,-8375.06,248.809,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014137,245649,0,1519,6292,0,0,175,0,-1,-8376.9,247.771,155.347,4.59481,0,0,0.747432,-0.664339,120,255,1,0,'',22423),
+(51014138,245649,0,1519,6292,0,0,175,0,-1,-8377.02,247.26,155.347,0.958326,0,0,0.461037,0.887381,120,255,1,0,'',22423),
+(51014139,245649,0,1519,6292,0,0,175,0,-1,-8373.97,249.128,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014140,245649,0,1519,6292,0,0,175,0,-1,-8374.88,249.207,155.347,3.26766,0,0,0.998014,-0.0629919,120,255,1,0,'',22423),
+(51014141,245649,0,1519,6292,0,0,175,0,-1,-8377.62,246.946,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014142,245649,0,1519,6292,0,0,175,0,-1,-8374.36,249.434,155.347,0.851876,0,0,0.413175,0.910652,120,255,1,0,'',22423),
+(51014143,245649,0,1519,6292,0,0,175,0,-1,-8374.6,248.88,155.347,4.00723,0,0,0.907787,-0.419431,120,255,1,0,'',22423),
+(51014144,245649,0,1519,6292,0,0,175,0,-1,-8373.9,249.865,155.347,4.03958,0,0,0.900884,-0.434059,120,255,1,0,'',22423),
+(51014145,245649,0,1519,6292,0,0,175,0,-1,-8377.11,247.019,155.347,0.346144,0,0,0.172209,0.98506,120,255,1,0,'',22423),
+(51014146,245649,0,1519,6292,0,0,175,0,-1,-8377.99,246.738,155.347,0.28436,0,0,0.141701,0.989909,120,255,1,0,'',22423),
+(51014147,245649,0,1519,6292,0,0,175,0,-1,-8376.71,246.946,155.347,0.218751,0,0,0.109158,0.994024,120,255,1,0,'',22423),
+(51014148,245649,0,1519,6292,0,0,175,0,-1,-8374.48,249.111,155.347,3.39506,0,0,0.99198,-0.126395,120,255,1,0,'',22423),
+(51014149,245649,0,1519,6292,0,0,175,0,-1,-8375.53,248.597,155.347,3.62259,0,0,0.971219,-0.238187,120,255,1,0,'',22423),
+(51014150,245649,0,1519,6292,0,0,175,0,-1,-8378.49,246.531,155.347,2.65719,0,0,0.970812,0.23984,120,255,1,0,'',22423),
+(51014151,245649,0,1519,6292,0,0,175,0,-1,-8376.12,247.632,155.347,0.573691,0,0,0.282928,0.959141,120,255,1,0,'',22423),
+(51014152,245649,0,1519,6292,0,0,175,0,-1,-8374.78,248.384,155.347,1.36051,0,0,0.628991,0.777412,120,255,1,0,'',22423),
+(51014153,245649,0,1519,6292,0,0,175,0,-1,-8377.46,246.385,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014154,245649,0,1519,6292,0,0,175,0,-1,-8373.59,249.297,155.347,3.33327,0,0,0.995411,-0.0956921,120,255,1,0,'',22423),
+(51014155,245649,0,1519,6292,0,0,175,0,-1,-8377.64,246.219,155.347,0.990678,0,0,0.47533,0.879808,120,255,1,0,'',22423),
+(51014156,245649,0,1519,6292,0,0,175,0,-1,-8377.53,243.491,155.347,4.84877,0,0,0.657283,-0.753644,120,255,1,0,'',22423),
+(51014157,245649,0,1519,6292,0,0,175,0,-1,-8371.71,249.082,155.347,6.08848,0,0,0.0971989,-0.995265,120,255,1,0,'',22423),
+(51014158,245649,0,1519,6292,0,0,175,0,-1,-8370.88,249.205,155.347,1.71242,0,0,0.755364,0.655305,120,255,1,0,'',22423),
+(51014159,245649,0,1519,6292,0,0,175,0,-1,-8370.97,248.814,155.347,1.83982,0,0,0.795547,0.605892,120,255,1,0,'',22423),
+(51014160,245649,0,1519,6292,0,0,175,0,-1,-8377.19,243.767,155.347,5.58835,0,0,0.340471,-0.940255,120,255,1,0,'',22423),
+(51014161,245649,0,1519,6292,0,0,175,0,-1,-8373.06,249.458,155.347,5.7061,0,0,0.284555,-0.95866,120,255,1,0,'',22423),
+(51014162,245640,0,1519,6292,0,0,175,0,-1,-8374.69,246.219,155.347,3.83248,0,0,0.940925,-0.338614,120,255,1,0,'',22423),
+(51014163,245649,0,1519,6292,0,0,175,0,-1,-8371.21,248.92,155.347,2.45199,0,0,0.941143,0.33801,120,255,1,0,'',22423),
+(51014164,245649,0,1519,6292,0,0,175,0,-1,-8372.23,249.654,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014165,245649,0,1519,6292,0,0,175,0,-1,-8377.43,243.872,155.347,4.97616,0,0,0.607979,-0.793953,120,255,1,0,'',22423),
+(51014166,245649,0,1519,6292,0,0,175,0,-1,-8377.64,244.783,155.347,4.91438,0,0,0.63221,-0.774797,120,255,1,0,'',22423),
+(51014167,245649,0,1519,6292,0,0,175,0,-1,-8371.52,249.851,155.347,2.06736,0,0,0.859188,0.511661,120,255,1,0,'',22423),
+(51014168,245649,0,1519,6292,0,0,175,0,-1,-8378.19,244.469,155.347,5.6207,0,0,0.325218,-0.945639,120,255,1,0,'',22423),
+(51014169,245649,0,1519,6292,0,0,175,0,-1,-8375.35,247.859,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014170,245649,0,1519,6292,0,0,175,0,-1,-8370.65,248.674,155.347,5.57984,0,0,0.344468,-0.938798,120,255,1,0,'',22423),
+(51014171,245649,0,1519,6292,0,0,175,0,-1,-8378.03,244.279,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014172,245649,0,1519,6292,0,0,175,0,-1,-8371.28,249.373,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014173,245649,0,1519,6292,0,0,175,0,-1,-8377.45,244.399,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014174,245649,0,1519,6292,0,0,175,0,-1,-8376.39,247.043,155.347,4.54825,0,0,0.762694,-0.64676,120,255,1,0,'',22423),
+(51014175,245649,0,1519,6292,0,0,175,0,-1,-8377.75,244.012,155.347,2.43299,0,0,0.937889,0.346935,120,255,1,0,'',22423),
+(51014176,245649,0,1519,6292,0,0,175,0,-1,-8377.79,245.295,155.347,1.00403,0,0,0.481193,0.876615,120,255,1,0,'',22423),
+(51014177,245649,0,1519,6292,0,0,175,0,-1,-8370.94,249.533,155.347,6.04192,0,0,0.12034,-0.992733,120,255,1,0,'',22423),
+(51014178,245649,0,1519,6292,0,0,175,0,-1,-8377.47,243.154,155.347,2.89507,0,0,0.992413,0.122949,120,255,1,0,'',22423),
+(51014179,245649,0,1519,6292,0,0,175,0,-1,-8370.76,247.913,155.347,1.77803,0,0,0.776451,0.630177,120,255,1,0,'',22423),
+(51014180,245649,0,1519,6292,0,0,175,0,-1,-8370.95,248.295,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014181,245649,0,1519,6292,0,0,175,0,-1,-8370.37,248.417,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014182,245649,0,1519,6292,0,0,175,0,-1,-8376.9,242.846,155.347,5.20371,0,0,0.513911,-0.857844,120,255,1,0,'',22423),
+(51014183,245649,0,1519,6292,0,0,175,0,-1,-8377.13,243.311,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014184,245649,0,1519,6292,0,0,175,0,-1,-8376.69,243.604,155.347,2.94163,0,0,0.995006,0.0998149,120,255,1,0,'',22423),
+(51014185,245649,0,1519,6292,0,0,175,0,-1,-8370.21,248.226,155.347,2.48435,0,0,0.946488,0.322738,120,255,1,0,'',22423),
+(51014186,245649,0,1519,6292,0,0,175,0,-1,-8371.97,245.627,155.347,3.34924,0,0,0.994615,-0.103637,120,255,1,0,'',22423),
+(51014187,245649,0,1519,6292,0,0,175,0,-1,-8374.09,243.729,155.347,0.854521,0,0,0.414379,0.910104,120,255,1,0,'',22423),
+(51014188,245649,0,1519,6292,0,0,175,0,-1,-8370.59,247.389,155.347,4.15088,0,0,0.875347,-0.483496,120,255,1,0,'',22423),
+(51014189,245649,0,1519,6292,0,0,175,0,-1,-8374.72,243.488,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014190,245649,0,1519,6292,0,0,175,0,-1,-8371.2,246.189,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014191,245649,0,1519,6292,0,0,175,0,-1,-8371.02,246.359,155.347,4.12117,0,0,0.882432,-0.470439,120,255,1,0,'',22423),
+(51014192,245649,0,1519,6292,0,0,175,0,-1,-8375.64,243.16,155.347,2.55339,0,0,0.957063,0.28988,120,255,1,0,'',22423),
+(51014193,245649,0,1519,6292,0,0,175,0,-1,-8374.2,243.5,155.347,0.242342,0,0,0.120875,0.992668,120,255,1,0,'',22423),
+(51014194,245649,0,1519,6292,0,0,175,0,-1,-8372.1,245.224,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014195,245649,0,1519,6292,0,0,175,0,-1,-8371.65,245.319,155.347,4.08881,0,0,0.889928,-0.456101,120,255,1,0,'',22423),
+(51014196,245649,0,1519,6292,0,0,175,0,-1,-8373.33,244.736,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014197,245649,0,1519,6292,0,0,175,0,-1,-8372.56,244.958,155.347,3.70418,0,0,0.960697,-0.277599,120,255,1,0,'',22423),
+(51014198,245649,0,1519,6292,0,0,175,0,-1,-8373.64,243.795,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014199,245649,0,1519,6292,0,0,175,0,-1,-8373.91,244.229,155.347,4.491,0,0,0.780892,-0.624666,120,255,1,0,'',22423),
+(51014200,245649,0,1519,6292,0,0,175,0,-1,-8371.45,245.892,155.347,0.933465,0,0,0.449971,0.893043,120,255,1,0,'',22423),
+(51014201,245649,0,1519,6292,0,0,175,0,-1,-8371.56,245.571,155.347,3.47664,0,0,0.986001,-0.166741,120,255,1,0,'',22423),
+(51014202,245649,0,1519,6292,0,0,175,0,-1,-8375.11,243.321,155.347,0.180558,0,0,0.0901564,0.995928,120,255,1,0,'',22423),
+(51014203,245649,0,1519,6292,0,0,175,0,-1,-8372.29,245.547,155.347,1.39555,0,0,0.642514,0.766274,120,255,1,0,'',22423),
+(51014204,245649,0,1519,6292,0,0,175,0,-1,-8376.18,243.04,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014205,245649,0,1519,6292,0,0,175,0,-1,-8374.34,243.177,155.347,3.98236,0,0,0.912932,-0.408111,120,255,1,0,'',22423),
+(51014206,245649,0,1519,6292,0,0,175,0,-1,-8374.61,242.904,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014207,245649,0,1519,6292,0,0,175,0,-1,-8374.81,242.757,155.347,0.886873,0,0,0.429046,0.903283,120,255,1,0,'',22423),
+(51014208,245649,0,1519,6292,0,0,175,0,-1,-8370.68,245.839,155.347,3.41486,0,0,0.99068,-0.136209,120,255,1,0,'',22423),
+(51014209,245649,0,1519,6292,0,0,175,0,-1,-8372.31,244.247,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014210,245649,0,1519,6292,0,0,175,0,-1,-8373.82,243.394,155.347,0.114949,0,0,0.0574429,0.998349,120,255,1,0,'',22423),
+(51014211,245649,0,1519,6292,0,0,175,0,-1,-8371.78,244.807,155.347,1.4421,0,0,0.660174,0.751113,120,255,1,0,'',22423),
+(51014212,245649,0,1519,6292,0,0,175,0,-1,-8370.18,246.028,155.347,5.78769,0,0,0.245221,-0.969467,120,255,1,0,'',22423),
+(51014213,245649,0,1519,6292,0,0,175,0,-1,-8371.05,245.627,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014214,245649,0,1519,6292,0,0,175,0,-1,-8373.15,244.009,155.347,0.469888,0,0,0.232789,0.972527,120,255,1,0,'',22423),
+(51014215,245649,0,1519,6292,0,0,175,0,-1,-8373.48,243.444,155.347,4.44444,0,0,0.795221,-0.606319,120,255,1,0,'',22423),
+(51014216,245649,0,1519,6292,0,0,175,0,-1,-8372.31,244.247,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014217,245649,0,1519,6292,0,0,175,0,-1,-8373.48,243.444,155.347,4.44444,0,0,0.795221,-0.606319,120,255,1,0,'',22423),
+(51014218,245649,0,1519,6292,0,0,175,0,-1,-8372.1,245.224,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014219,245649,0,1519,6292,0,0,175,0,-1,-8371.56,245.571,155.347,3.47664,0,0,0.986001,-0.166741,120,255,1,0,'',22423),
+(51014220,245649,0,1519,6292,0,0,175,0,-1,-8374.09,243.729,155.347,0.854521,0,0,0.414379,0.910104,120,255,1,0,'',22423),
+(51014221,245649,0,1519,6292,0,0,175,0,-1,-8373.82,243.394,155.347,0.114949,0,0,0.0574429,0.998349,120,255,1,0,'',22423),
+(51014222,245649,0,1519,6292,0,0,175,0,-1,-8373.33,244.736,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014223,245649,0,1519,6292,0,0,175,0,-1,-8371.2,246.189,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014224,245649,0,1519,6292,0,0,175,0,-1,-8372.56,244.958,155.347,3.70418,0,0,0.960697,-0.277599,120,255,1,0,'',22423),
+(51014225,245649,0,1519,6292,0,0,175,0,-1,-8371.65,245.319,155.347,4.08881,0,0,0.889928,-0.456101,120,255,1,0,'',22423),
+(51014226,245649,0,1519,6292,0,0,175,0,-1,-8371.78,244.807,155.347,1.4421,0,0,0.660174,0.751113,120,255,1,0,'',22423),
+(51014227,245649,0,1519,6292,0,0,175,0,-1,-8375.11,243.321,155.347,0.180558,0,0,0.0901564,0.995928,120,255,1,0,'',22423),
+(51014228,245649,0,1519,6292,0,0,175,0,-1,-8372.29,245.547,155.347,1.39555,0,0,0.642514,0.766274,120,255,1,0,'',22423),
+(51014229,245649,0,1519,6292,0,0,175,0,-1,-8374.61,242.904,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014230,245649,0,1519,6292,0,0,175,0,-1,-8373.15,244.009,155.347,0.469888,0,0,0.232789,0.972527,120,255,1,0,'',22423),
+(51014231,245649,0,1519,6292,0,0,175,0,-1,-8370.18,246.028,155.347,5.78769,0,0,0.245221,-0.969467,120,255,1,0,'',22423),
+(51014232,245649,0,1519,6292,0,0,175,0,-1,-8374.72,243.488,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014233,245649,0,1519,6292,0,0,175,0,-1,-8371.05,245.627,155.347,2.5589,0,0,0.957858,0.287242,120,255,1,0,'',22423),
+(51014234,245649,0,1519,6292,0,0,175,0,-1,-8373.91,244.229,155.347,4.491,0,0,0.780892,-0.624666,120,255,1,0,'',22423),
+(51014235,245649,0,1519,6292,0,0,175,0,-1,-8371.97,245.627,155.347,3.34924,0,0,0.994615,-0.103637,120,255,1,0,'',22423),
+(51014236,245649,0,1519,6292,0,0,175,0,-1,-8371.45,245.892,155.347,0.933465,0,0,0.449971,0.893043,120,255,1,0,'',22423),
+(51014237,245649,0,1519,6292,0,0,175,0,-1,-8374.34,243.177,155.347,3.98236,0,0,0.912932,-0.408111,120,255,1,0,'',22423),
+(51014238,245649,0,1519,6292,0,0,175,0,-1,-8373.64,243.795,155.347,5.6078,0,0,0.331311,-0.943522,120,255,1,0,'',22423),
+(51014239,245649,0,1519,6292,0,0,175,0,-1,-8370.68,245.839,155.347,3.41486,0,0,0.99068,-0.136209,120,255,1,0,'',22423),
+(51014240,245649,0,1519,6292,0,0,175,0,-1,-8374.81,242.757,155.347,0.886873,0,0,0.429046,0.903283,120,255,1,0,'',22423),
+(51014241,245649,0,1519,6292,0,0,175,0,-1,-8374.2,243.5,155.347,0.242342,0,0,0.120875,0.992668,120,255,1,0,'',22423),
+(51014242,245649,0,1519,6292,0,0,175,0,-1,-8370.97,248.814,155.347,1.83982,0,0,0.795547,0.605892,120,255,1,0,'',22423),
+(51014243,245649,0,1519,6292,0,0,175,0,-1,-8370.37,248.417,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014244,245649,0,1519,6292,0,0,175,0,-1,-8376.69,243.604,155.347,2.94163,0,0,0.995006,0.0998149,120,255,1,0,'',22423),
+(51014245,245649,0,1519,6292,0,0,175,0,-1,-8376.18,243.04,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014246,245649,0,1519,6292,0,0,175,0,-1,-8377.53,243.491,155.347,4.84877,0,0,0.657283,-0.753644,120,255,1,0,'',22423),
+(51014247,245649,0,1519,6292,0,0,175,0,-1,-8378.03,244.279,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014248,245649,0,1519,6292,0,0,175,0,-1,-8377.75,244.012,155.347,2.43299,0,0,0.937889,0.346935,120,255,1,0,'',22423),
+(51014249,245649,0,1519,6292,0,0,175,0,-1,-8377.47,243.154,155.347,2.89507,0,0,0.992413,0.122949,120,255,1,0,'',22423),
+(51014250,245649,0,1519,6292,0,0,175,0,-1,-8371.21,248.92,155.347,2.45199,0,0,0.941143,0.33801,120,255,1,0,'',22423),
+(51014251,245649,0,1519,6292,0,0,175,0,-1,-8370.59,247.389,155.347,4.15088,0,0,0.875347,-0.483496,120,255,1,0,'',22423),
+(51014252,245649,0,1519,6292,0,0,175,0,-1,-8377.13,243.311,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014253,245649,0,1519,6292,0,0,175,0,-1,-8370.76,247.913,155.347,1.77803,0,0,0.776451,0.630177,120,255,1,0,'',22423),
+(51014254,245649,0,1519,6292,0,0,175,0,-1,-8376.9,242.846,155.347,5.20371,0,0,0.513911,-0.857844,120,255,1,0,'',22423),
+(51014255,245649,0,1519,6292,0,0,175,0,-1,-8377.19,243.767,155.347,5.58835,0,0,0.340471,-0.940255,120,255,1,0,'',22423),
+(51014256,245649,0,1519,6292,0,0,175,0,-1,-8370.88,249.205,155.347,1.71242,0,0,0.755364,0.655305,120,255,1,0,'',22423),
+(51014257,245649,0,1519,6292,0,0,175,0,-1,-8377.45,244.399,155.347,4.05844,0,0,0.896751,-0.442535,120,255,1,0,'',22423),
+(51014258,245649,0,1519,6292,0,0,175,0,-1,-8370.65,248.674,155.347,5.57984,0,0,0.344468,-0.938798,120,255,1,0,'',22423),
+(51014259,245649,0,1519,6292,0,0,175,0,-1,-8370.95,248.295,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014260,245649,0,1519,6292,0,0,175,0,-1,-8371.02,246.359,155.347,4.12117,0,0,0.882432,-0.470439,120,255,1,0,'',22423),
+(51014261,245649,0,1519,6292,0,0,175,0,-1,-8375.64,243.16,155.347,2.55339,0,0,0.957063,0.28988,120,255,1,0,'',22423),
+(51014262,245649,0,1519,6292,0,0,175,0,-1,-8377.43,243.872,155.347,4.97616,0,0,0.607979,-0.793953,120,255,1,0,'',22423),
+(51014263,245649,0,1519,6292,0,0,175,0,-1,-8370.21,248.226,155.347,2.48435,0,0,0.946488,0.322738,120,255,1,0,'',22423),
+(51014264,245640,0,1519,6292,0,0,175,0,-1,-8374.69,246.219,155.347,3.83248,0,0,0.940925,-0.338614,120,255,1,0,'',22423),
+(51014265,245649,0,1519,6292,0,0,175,0,-1,-8377.46,246.385,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014266,245649,0,1519,6292,0,0,175,0,-1,-8374.48,249.111,155.347,3.39506,0,0,0.99198,-0.126395,120,255,1,0,'',22423),
+(51014267,245649,0,1519,6292,0,0,175,0,-1,-8377.64,246.219,155.347,0.990678,0,0,0.47533,0.879808,120,255,1,0,'',22423),
+(51014268,245649,0,1519,6292,0,0,175,0,-1,-8371.28,249.373,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014269,245649,0,1519,6292,0,0,175,0,-1,-8376.39,247.043,155.347,4.54825,0,0,0.762694,-0.64676,120,255,1,0,'',22423),
+(51014270,245649,0,1519,6292,0,0,175,0,-1,-8376.58,247.361,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014271,245649,0,1519,6292,0,0,175,0,-1,-8374.78,248.384,155.347,1.36051,0,0,0.628991,0.777412,120,255,1,0,'',22423),
+(51014272,245649,0,1519,6292,0,0,175,0,-1,-8373.06,249.458,155.347,5.7061,0,0,0.284555,-0.95866,120,255,1,0,'',22423),
+(51014273,245649,0,1519,6292,0,0,175,0,-1,-8376.12,247.632,155.347,0.573691,0,0,0.282928,0.959141,120,255,1,0,'',22423),
+(51014274,245649,0,1519,6292,0,0,175,0,-1,-8370.94,249.533,155.347,6.04192,0,0,0.12034,-0.992733,120,255,1,0,'',22423),
+(51014275,245649,0,1519,6292,0,0,175,0,-1,-8371.71,249.082,155.347,6.08848,0,0,0.0971989,-0.995265,120,255,1,0,'',22423),
+(51014276,245649,0,1519,6292,0,0,175,0,-1,-8372.23,249.654,155.347,0.922094,0,0,0.444886,0.895587,120,255,1,0,'',22423),
+(51014277,245649,0,1519,6292,0,0,175,0,-1,-8377.11,247.019,155.347,0.346144,0,0,0.172209,0.98506,120,255,1,0,'',22423),
+(51014278,245649,0,1519,6292,0,0,175,0,-1,-8373.59,249.297,155.347,3.33327,0,0,0.995411,-0.0956921,120,255,1,0,'',22423),
+(51014279,245649,0,1519,6292,0,0,175,0,-1,-8375.35,247.859,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014280,245649,0,1519,6292,0,0,175,0,-1,-8374.6,248.88,155.347,4.00723,0,0,0.907787,-0.419431,120,255,1,0,'',22423),
+(51014281,245649,0,1519,6292,0,0,175,0,-1,-8377.22,246.682,155.347,4.08617,0,0,0.890529,-0.454926,120,255,1,0,'',22423),
+(51014282,245649,0,1519,6292,0,0,175,0,-1,-8378.19,244.469,155.347,5.6207,0,0,0.325218,-0.945639,120,255,1,0,'',22423),
+(51014283,245649,0,1519,6292,0,0,175,0,-1,-8376.71,246.946,155.347,0.218751,0,0,0.109158,0.994024,120,255,1,0,'',22423),
+(51014284,245649,0,1519,6292,0,0,175,0,-1,-8377.02,247.26,155.347,0.958326,0,0,0.461037,0.887381,120,255,1,0,'',22423),
+(51014285,245649,0,1519,6292,0,0,175,0,-1,-8373.97,249.128,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014286,245649,0,1519,6292,0,0,175,0,-1,-8377.64,244.783,155.347,4.91438,0,0,0.63221,-0.774797,120,255,1,0,'',22423),
+(51014287,245649,0,1519,6292,0,0,175,0,-1,-8371.52,249.851,155.347,2.06736,0,0,0.859188,0.511661,120,255,1,0,'',22423),
+(51014288,245649,0,1519,6292,0,0,175,0,-1,-8377.79,245.295,155.347,1.00403,0,0,0.481193,0.876615,120,255,1,0,'',22423),
+(51014289,245649,0,1519,6292,0,0,175,0,-1,-8375.06,248.809,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014290,245649,0,1519,6292,0,0,175,0,-1,-8375.21,249.154,155.347,1.31395,0,0,0.610724,0.791843,120,255,1,0,'',22423),
+(51014291,245649,0,1519,6292,0,0,175,0,-1,-8373.9,249.865,155.347,4.03958,0,0,0.900884,-0.434059,120,255,1,0,'',22423),
+(51014292,245649,0,1519,6292,0,0,175,0,-1,-8378.49,246.531,155.347,2.65719,0,0,0.970812,0.23984,120,255,1,0,'',22423),
+(51014293,245649,0,1519,6292,0,0,175,0,-1,-8377.99,246.738,155.347,0.28436,0,0,0.141701,0.989909,120,255,1,0,'',22423),
+(51014294,245649,0,1519,6292,0,0,175,0,-1,-8375.53,248.597,155.347,3.62259,0,0,0.971219,-0.238187,120,255,1,0,'',22423),
+(51014295,245649,0,1519,6292,0,0,175,0,-1,-8377.62,246.946,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014296,245649,0,1519,6292,0,0,175,0,-1,-8376.38,248.344,155.347,5.71161,0,0,0.281913,-0.95944,120,255,1,0,'',22423),
+(51014297,245649,0,1519,6292,0,0,175,0,-1,-8374.09,249.707,155.347,2.47731,0,0,0.945346,0.326068,120,255,1,0,'',22423),
+(51014298,245649,0,1519,6292,0,0,175,0,-1,-8376.9,247.771,155.347,4.59481,0,0,0.747432,-0.664339,120,255,1,0,'',22423),
+(51014299,245649,0,1519,6292,0,0,175,0,-1,-8374.36,249.434,155.347,0.851876,0,0,0.413175,0.910652,120,255,1,0,'',22423),
+(51014300,245649,0,1519,6292,0,0,175,0,-1,-8374.88,249.207,155.347,3.26766,0,0,0.998014,-0.0629919,120,255,1,0,'',22423);
+
+UPDATE `creature_template` SET `gossip_menu_id`=20464, `ScriptName`='npc_anduin_wrynn' WHERE `entry`=107574;
+UPDATE `scene_template` SET `ScriptName`='scene_demons_among_them_alliance' WHERE `SceneId`=1456;
+
+DELETE FROM `spell_area` WHERE `area` IN (5390, 6292);
+DELETE FROM `spell_area` WHERE `area` IN (5390);
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) VALUES
+(57569, 5390, 39689, 39691, 64, 64), -- Phase 175 on Stormwind Canals starting when quest 39691 rewarded until 39691 rewarded
+(57569, 6292, 39689, 44463, 64, 2); -- Phase 175 on Stormwind Keep starting when quest 39691 rewarded until 44463 completed
