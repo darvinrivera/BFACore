@@ -915,3 +915,5 @@ DELETE FROM `spell_area` WHERE `area` IN (5390);
 INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `quest_start_status`, `quest_end_status`) VALUES
 (57569, 5390, 39689, 39691, 64, 64), -- Phase 175 on Stormwind Canals starting when quest 39691 rewarded until 39691 rewarded
 (57569, 6292, 39689, 44463, 64, 2); -- Phase 175 on Stormwind Keep starting when quest 39691 rewarded until 44463 completed
+
+UPDATE `creature` SET `PhaseId` = 170 WHERE `guid` IN (20540915 , 20540920, 20540916); --alterations bfa core db phasing fix only
