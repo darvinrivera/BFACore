@@ -31,6 +31,22 @@ void HotfixDatabaseConnection::DoPrepareStatements()
     if (!m_reconnecting)
         m_stmts.resize(MAX_HOTFIXDATABASE_STATEMENTS);
 
+    // AzeriteEmpoweredItem.db2 
+    PrepareStatement(HOTFIX_SEL_AZERITE_EMPOWERED_ITEM, "SELECT ID, ItemID, AzeriteTierUnlockSetID, AzeritePowerSetID " 
+    "FROM azerite_empowered_item ORDER BY ID", CONNECTION_SYNCH);
+
+    // AzeriteItem.db2 
+    PrepareStatement(HOTFIX_SEL_AZERITE_ITEM, "SELECT ID, ItemID FROM azerite_item ORDER BY ID", CONNECTION_SYNCH); 
+
+    // AzeriteTierUnlock.db2 
+    PrepareStatement(HOTFIX_SEL_AZERITE_TIER_UNLOCK, "SELECT ID, ItemCreationContext, Tier, AzeriteLevel, AzeriteTierUnlockSetId FROM azerite_tier_unlock ORDER BY ID", CONNECTION_SYNCH);
+
+    // AzeritePower.db2 
+    PrepareStatement(HOTFIX_SEL_AZERITE_POWER, "SELECT ID, SpellID, ItemBonusListID, SpecSet, Unk0 FROM azerite_power ORDER BY ID", CONNECTION_SYNCH);
+
+    // AzeritePower.db2 
+    PrepareStatement(HOTFIX_SEL_AZERITE_POWER_SET_MEMBER, "SELECT ID, AzeritePowerID, Class, Tier, OrderIndex, AzeritePowerSetID FROM azerite_power_set_member ORDER BY ID", CONNECTION_SYNCH); 
+
     // Achievement.db2
     PrepareStatement(HOTFIX_SEL_ACHIEVEMENT, "SELECT Description, Title, Reward, ID, InstanceID, Faction, Supercedes, Category, MinimumCriteria, "
         "Points, Flags, UiOrder, IconFileID, CriteriaTree, SharesCriteria FROM achievement ORDER BY ID DESC", CONNECTION_SYNCH);
