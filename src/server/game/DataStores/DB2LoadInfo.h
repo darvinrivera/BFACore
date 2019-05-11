@@ -62,7 +62,7 @@ struct AzeriteEmpoweredItemLoadInfo
          { false, FT_INT, "AzeriteTierUnlockSetID" },
          { false, FT_INT, "AzeritePowerSetID" },
      };
-     static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteEmpoweredItemMeta::Instance(), PROJECT_HOTFIX_SEL_AZERITE_EMPOWERED_ITEM);
+     static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteEmpoweredItemMeta::Instance(), HOTFIX_SEL_AZERITE_EMPOWERED_ITEM);
      return &loadInfo;
    }
 };
@@ -76,7 +76,7 @@ struct AzeriteItemLoadInfo
          { false, FT_INT, "ID" },
          { true, FT_INT, "ItemID" },
       };
-      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteItemMeta::Instance(), PROJECT_HOTFIX_SEL_AZERITE_ITEM);
+      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteItemMeta::Instance(), HOTFIX_SEL_AZERITE_ITEM);
       return &loadInfo;
    }
 };
@@ -93,7 +93,7 @@ struct AzeriteTierUnlockLoadInfo
             { false, FT_BYTE, "AzeriteLevel" },
             { false, FT_BYTE, "AzeriteTierUnlockSetId" },
      };
-     static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteTierUnlockMeta::Instance(), PROJECT_HOTFIX_SEL_AZERITE_TIER_UNLOCK);
+     static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeriteTierUnlockMeta::Instance(), HOTFIX_SEL_AZERITE_TIER_UNLOCK);
      return &loadInfo;
    }
 };
@@ -110,7 +110,7 @@ struct AzeritePowerLoadInfo
              { true, FT_INT, "SpecSet" },
              { true, FT_INT, "Unk0" },
       };
-      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeritePowerMeta::Instance(), PROJECT_HOTFIX_SEL_AZERITE_POWER);
+      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeritePowerMeta::Instance(), HOTFIX_SEL_AZERITE_POWER);
       return &loadInfo;
    }
 };
@@ -128,7 +128,7 @@ struct AzeritePowerSetMemberLoadInfo
             { false, FT_BYTE, "OrderIndex" },
             { false, FT_SHORT, "AzeritePowerSetID" },
       };
-      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeritePowerSetMemberMeta::Instance(), PROJECT_HOTFIX_SEL_AZERITE_POWER_SET_MEMBER);
+      static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, AzeritePowerSetMemberMeta::Instance(), HOTFIX_SEL_AZERITE_POWER_SET_MEMBER);
       return &loadInfo;
    }
 };
