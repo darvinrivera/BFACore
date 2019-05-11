@@ -1035,8 +1035,6 @@ namespace WorldPackets
 
             bool Enabled;
         };
-    }
-}
 
             class AzeriteXpGain final : public WorldPackets::ServerPacket
             {
@@ -1073,8 +1071,6 @@ namespace WorldPackets
                 ObjectGuid UnitGUID;
             };
 
-            
-        }
     }
 }
 
