@@ -36,11 +36,11 @@
 #undef GetClassName
 #endif
 
-DB2Storage<AzeriteItemEntry>                    sAzeriteItemStore("AzeriteItem.db2", LoadInfo::AzeriteItemLoadInfo::Instance());
-DB2Storage<AzeriteEmpoweredItemEntry>           sAzeriteEmpoweredItemStore("AzeriteEmpoweredItem.db2", LoadInfo::AzeriteEmpoweredItemLoadInfo::Instance());
-DB2Storage<AzeriteTierUnlockEntry>              sAzeriteTierUnlockStore("AzeriteTierUnlock.db2", LoadInfo::AzeriteTierUnlockLoadInfo::Instance());
-DB2Storage<AzeritePowerEntry>                   sAzeritePowerStore("AzeritePower.db2", LoadInfo::AzeritePowerLoadInfo::Instance());
-DB2Storage<AzeritePowerSetMemberEntry>          sAzeritePowerSetMember("AzeritePowerSetMember.db2", LoadInfo::AzeritePowerSetMemberLoadInfo::Instance());
+DB2Storage<AzeriteItemEntry>                    sAzeriteItemStore("AzeriteItem.db2", AzeriteItemLoadInfo::Instance());
+DB2Storage<AzeriteEmpoweredItemEntry>           sAzeriteEmpoweredItemStore("AzeriteEmpoweredItem.db2", AzeriteEmpoweredItemLoadInfo::Instance());
+DB2Storage<AzeriteTierUnlockEntry>              sAzeriteTierUnlockStore("AzeriteTierUnlock.db2", AzeriteTierUnlockLoadInfo::Instance());
+DB2Storage<AzeritePowerEntry>                   sAzeritePowerStore("AzeritePower.db2", AzeritePowerLoadInfo::Instance());
+DB2Storage<AzeritePowerSetMemberEntry>          sAzeritePowerSetMember("AzeritePowerSetMember.db2", AzeritePowerSetMemberLoadInfo::Instance());
 DB2Storage<AchievementEntry>                    sAchievementStore("Achievement.db2", AchievementLoadInfo::Instance());
 DB2Storage<AdventureJournalEntry>               sAdventureJournalStore("AdventureJournal.db2", AdventureJournalLoadInfo::Instance());
 DB2Storage<AnimationDataEntry>                  sAnimationDataStore("AnimationData.db2", AnimationDataLoadInfo::Instance());
