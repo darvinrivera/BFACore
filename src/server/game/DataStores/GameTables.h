@@ -218,8 +218,8 @@ private:
     std::vector<T> _data;
 };
 
-TC_GAME_API extern GameTable<Structs::GtAzeriteBaseExperiencePerLevel>  AzeriteBaseExperiencePerLevel;
-TC_GAME_API extern GameTable<Structs::GtAzeriteLevelToItemLevel>        AzeriteLevelToItemLevel;
+TC_GAME_API extern GameTable<GtAzeriteBaseExperiencePerLevel>       sAzeriteBaseExperiencePerLevelGameTable;
+TC_GAME_API extern GameTable<GtAzeriteLevelToItemLevel>             sAzeriteLevelToItemLevelGameTable;
 TC_GAME_API extern GameTable<GtArtifactKnowledgeMultiplierEntry>    sArtifactKnowledgeMultiplierGameTable;
 TC_GAME_API extern GameTable<GtArtifactLevelXPEntry>                sArtifactLevelXPGameTable;
 TC_GAME_API extern GameTable<GtBarberShopCostBaseEntry>             sBarberShopCostBaseGameTable;
