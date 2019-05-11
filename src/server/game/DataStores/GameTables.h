@@ -22,6 +22,17 @@
 #include "Common.h"
 #include <vector>
 
+struct GtAzeriteBaseExperiencePerLevel
+{
+     float BaseExerperienceToNextLevel;
+     float MinimumExperienceToNextLevel;
+};
+
+struct GtAzeriteLevelToItemLevel
+{
+     float ItemLevel;
+};
+
 struct GtArtifactKnowledgeMultiplierEntry
 {
     float Multiplier = 0.0f;
@@ -207,6 +218,8 @@ private:
     std::vector<T> _data;
 };
 
+TC_GAME_API extern GameTable<Structs::GtAzeriteBaseExperiencePerLevel>  AzeriteBaseExperiencePerLevel;
+TC_GAME_API extern GameTable<Structs::GtAzeriteLevelToItemLevel>        AzeriteLevelToItemLevel;
 TC_GAME_API extern GameTable<GtArtifactKnowledgeMultiplierEntry>    sArtifactKnowledgeMultiplierGameTable;
 TC_GAME_API extern GameTable<GtArtifactLevelXPEntry>                sArtifactLevelXPGameTable;
 TC_GAME_API extern GameTable<GtBarberShopCostBaseEntry>             sBarberShopCostBaseGameTable;
