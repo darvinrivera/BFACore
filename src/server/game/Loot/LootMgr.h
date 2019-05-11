@@ -51,7 +51,7 @@ struct TC_GAME_API LootStoreItem
     // displayid is filled in IsValid() which must be called after
     LootStoreItem(uint32 _itemid, uint8 _type, uint32 _reference, float _chance, bool _needs_quest, uint16 _lootmode, uint8 _groupid, uint32 _mincount, uint32 _maxcount)
         : itemid(_itemid), type(_type), reference(_reference), chance(_chance), lootmode(_lootmode),
-        needs_quest(_needs_quest), groupid(_groupid), mincount(_mincount), maxcount(_maxcount)
+        needs_quest(_needs_quest), groupid(_groupid), mincount(_mincount), maxcount(_maxcount), bonusList(_bonusList)
          { }
 
     bool Roll(bool rate) const;                             // Checks if the entry takes it's chance (at loot generation)
