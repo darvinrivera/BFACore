@@ -30,6 +30,15 @@ void CharacterDatabaseConnection::DoPrepareStatements()
         "ig.gemItemId1, ig.gemBonuses1, ig.gemContext1, ig.gemScalingLevel1, ig.gemItemId2, ig.gemBonuses2, ig.gemContext2, ig.gemScalingLevel2, ig.gemItemId3, ig.gemBonuses3, ig.gemContext3, ig.gemScalingLevel3, " \
         "im.fixedScalingLevel, im.artifactKnowledgeLevel, im.challengeId, im.challengeLevel, im.challengeAffix1, im.challengeAffix2, im.challengeAffix3, im.challengeIsCharged"
 
+    // azerite 
+    PrepareStatement(CHAR_SEL_ITEM_INSTANCE_AZERITE, "SELECT a.itemGuid, a.level, a.xp FROM item_instance_azerite a INNER JOIN character_inventory ci ON ci.item = a.itemGuid WHERE ci.guid = ?", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_INS_ITEM_INSTANCE_AZERITE, "INSERT INTO item_instance_azerite (level, xp, itemGuid) VALUES (?, ?, ?)", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_UPD_ITEM_INSTANCE_AZERITE, "UPDATE item_instance_azerite SET level = ?, xp = ? WHERE itemGuid = ?", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_DEL_ITEM_INSTANCE_AZERITE, "DELETE FROM item_instance_azerite WHERE itemGuid = ?", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_SEL_ITEM_INSTANCE_AZERITE_EMPOWERED, "SELECT a.itemGuid, power0, power1, power2, power3 FROM item_instance_azerite_empowered a INNER JOIN character_inventory ci ON ci.item = a.itemGuid WHERE ci.guid = ?", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_INS_ITEM_INSTANCE_AZERITE_EMPOWERED, "INSERT INTO item_instance_azerite_empowered (power0, power1, power2, power3, itemGuid) VALUES (?, ?, ?, ?, ?)", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_UPD_ITEM_INSTANCE_AZERITE_EMPOWERED, "UPDATE item_instance_azerite_empowered SET power0=?,power1=?,power2=?,power3=? WHERE itemGuid=?", CONNECTION_ASYNC); 
+    PrepareStatement(CHAR_DEL_ITEM_INSTANCE_AZERITE_EMPOWERED, "DELETE FROM item_instance_azerite_empowered WHERE itemGuid = ?", CONNECTION_ASYNC); 
     PrepareStatement(CHAR_DEL_QUEST_POOL_SAVE, "DELETE FROM pool_quest_save WHERE pool_id = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_INS_QUEST_POOL_SAVE, "INSERT INTO pool_quest_save (pool_id, quest_id) VALUES (?, ?)", CONNECTION_ASYNC);
     PrepareStatement(CHAR_DEL_NONEXISTENT_GUILD_BANK_ITEM, "DELETE FROM guild_bank_item WHERE guildid = ? AND TabId = ? AND SlotId = ?", CONNECTION_ASYNC);
