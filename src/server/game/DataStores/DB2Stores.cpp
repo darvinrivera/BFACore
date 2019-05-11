@@ -796,25 +796,25 @@ void DB2Manager::LoadStores(std::string const& dataPath, uint32 defaultLocale)
 
 for (uint32 i = 0; i < sAzeriteEmpoweredItemStore.GetNumRows(); ++i)
     {
-        if (Structs::AzeriteEmpoweredItemEntry const* azerite = sAzeriteEmpoweredItemStore.LookupEntry(i))
+        if (AzeriteEmpoweredItemEntry const* azerite = sAzeriteEmpoweredItemStore.LookupEntry(i))
             sDB2Manager._empoweredItem[azerite->ItemID] = azerite;
     }
 
     for (uint32 i = 0; i < sAzeriteTierUnlockStore.GetNumRows(); ++i)
     {
-        if (Structs::AzeriteTierUnlockEntry const* azerite = sAzeriteTierUnlockStore.LookupEntry(i))
+        if (AzeriteTierUnlockEntry const* azerite = sAzeriteTierUnlockStore.LookupEntry(i))
             sDB2Manager._azeriteTierUnlock[azerite->AzeriteTierUnlockSetId].push_back(azerite);
     }
 
     for (uint32 i = 0; i < sAzeritePowerSetMember.GetNumRows(); ++i)
     {
-        if (Structs::AzeritePowerSetMemberEntry const* azerite = sAzeritePowerSetMember.LookupEntry(i))
+        if (AzeritePowerSetMemberEntry const* azerite = sAzeritePowerSetMember.LookupEntry(i))
             sDB2Manager._azeritePowerSetMember[azerite->AzeritePowerSetID] = azerite;
     }
 
     for (uint32 i = 0; i < sSpecSetMemberStore.GetNumRows(); ++i)
     {
-        if (Structs::SpecSetMemberEntry const* spec = sSpecSetMemberStore.LookupEntry(i))
+        if (SpecSetMemberEntry const* spec = sSpecSetMemberStore.LookupEntry(i))
             sDB2Manager._specSetMember[spec->SpecSetMemberID].push_back(spec->CharSpecialization);
     }
 
@@ -2894,7 +2894,7 @@ static DBCPosition2D CalculateGlobalUiMapPosition(int32 uiMapID, DBCPosition2D u
     return uiPosition;
 }
 
-std::DataStores::Structs::AzeriteEmpoweredItemEntry const* DB2Manager::GetAzeriteEmpoweredItem(uint32 itemID) const
+void DB2Manager::GetAzeriteEmpoweredItem(uint32 itemID) const
 {
     auto itr = _empoweredItem.find(itemID);
     if (itr == _empoweredItem.end())
@@ -2903,7 +2903,7 @@ std::DataStores::Structs::AzeriteEmpoweredItemEntry const* DB2Manager::GetAzerit
     return itr->second;
 }
 
-std::DataStores::Structs::AzeriteTierUnlockEntry const*> DB2Manager::GetAzeriteTierUnlock(uint32 itemID) const
+void DB2Manager::GetAzeriteTierUnlock(uint32 itemID) const
 {
     auto item = GetAzeriteEmpoweredItem(itemID);
     if (item)
