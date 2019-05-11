@@ -1038,4 +1038,44 @@ namespace WorldPackets
     }
 }
 
+            class AzeriteXpGain final : public WorldPackets::ServerPacket
+            {
+            public:
+                AzeriteXpGain() : WorldPackets::ServerPacket(SMSG_AZERITE_XP_GAIN) { }
+
+                WorldPacket const* Write() override;
+
+                ObjectGuid AzeriteGUID;
+                uint64 XP = 0;
+            };
+            
+            class AzeriteEmpoweredItemSelectPower final : public WorldPackets::ClientPacket
+            {
+            public:
+                AzeriteEmpoweredItemSelectPower(WorldPacket&& packet) : WorldPackets::ClientPacket(CMSG_AZERITE_EMPOWERED_ITEM_SELECT_POWER, std::move(packet)) { }
+
+                void Read() override;
+
+                uint32 Tier;
+                uint32 AzeritePowerID;
+                uint8 Bag;
+                uint8 Slot;
+
+            };
+
+            class AzeriteEmpoweredItemRespecOpen final : public WorldPackets::ServerPacket
+            {
+            public:
+                AzeriteEmpoweredItemRespecOpen() : WorldPackets::ServerPacket(SMSG_AZERITE_EMPOWERED_ITEM_RESPEC_OPEN) { }
+
+                WorldPacket const* Write() override;
+
+                ObjectGuid UnitGUID;
+            };
+
+            
+        }
+    }
+}
+
 #endif // MiscPackets_h__
