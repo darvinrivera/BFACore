@@ -63,7 +63,6 @@ LootItem::LootItem(LootStoreItem const& li)
     }
 
     context = 0;
-    BonusListIDs = li.bonusList;
     count = 0;
     is_looted = 0;
     is_blocked = 0;
