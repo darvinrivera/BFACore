@@ -34,7 +34,7 @@
 
 class DB2HotfixGeneratorBase;
 
-TC_GAME_API extern DB2Storage<Structs::AzeritePowerEntry>           sAzeritePowerStore;
+TC_GAME_API extern DB2Storage<AzeritePowerEntry>                    sAzeritePowerStore;
 TC_GAME_API extern DB2Storage<AchievementEntry>                     sAchievementStore;
 TC_GAME_API extern DB2Storage<AdventureJournalEntry>                sAdventureJournalStore;
 TC_GAME_API extern DB2Storage<AnimationDataEntry>                   sAnimationDataStore;
