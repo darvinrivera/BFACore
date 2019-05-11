@@ -797,25 +797,25 @@ void DB2Manager::LoadStores(std::string const& dataPath, uint32 defaultLocale)
 for (uint32 i = 0; i < sAzeriteEmpoweredItemStore.GetNumRows(); ++i)
     {
         if (AzeriteEmpoweredItemEntry const* azerite = sAzeriteEmpoweredItemStore.LookupEntry(i))
-            sDB2Manager._empoweredItem[azerite->ItemID] = azerite;
+            _empoweredItem[azerite->ItemID] = azerite;
     }
 
     for (uint32 i = 0; i < sAzeriteTierUnlockStore.GetNumRows(); ++i)
     {
         if (AzeriteTierUnlockEntry const* azerite = sAzeriteTierUnlockStore.LookupEntry(i))
-            sDB2Manager._azeriteTierUnlock[azerite->AzeriteTierUnlockSetId].push_back(azerite);
+            _azeriteTierUnlock[azerite->AzeriteTierUnlockSetId].push_back(azerite);
     }
 
     for (uint32 i = 0; i < sAzeritePowerSetMember.GetNumRows(); ++i)
     {
         if (AzeritePowerSetMemberEntry const* azerite = sAzeritePowerSetMember.LookupEntry(i))
-            sDB2Manager._azeritePowerSetMember[azerite->AzeritePowerSetID] = azerite;
+            _azeritePowerSetMember[azerite->AzeritePowerSetID] = azerite;
     }
 
     for (uint32 i = 0; i < sSpecSetMemberStore.GetNumRows(); ++i)
     {
         if (SpecSetMemberEntry const* spec = sSpecSetMemberStore.LookupEntry(i))
-            sDB2Manager._specSetMember[spec->SpecSetMemberID].push_back(spec->CharSpecialization);
+            _specSetMember[spec->SpecSetMemberID].push_back(spec->CharSpecialization);
     }
 
     for (AreaGroupMemberEntry const* areaGroupMember : sAreaGroupMemberStore)
