@@ -36,6 +36,11 @@
 #undef GetClassName
 #endif
 
+DB2Storage<Structs::AzeriteItemEntry>                sAzeriteItemStore("AzeriteItem.db2", LoadInfo::AzeriteItemLoadInfo::Instance());
+DB2Storage<Structs::AzeriteEmpoweredItemEntry>       sAzeriteEmpoweredItemStore("AzeriteEmpoweredItem.db2", LoadInfo::AzeriteEmpoweredItemLoadInfo::Instance());
+DB2Storage<Structs::AzeriteTierUnlockEntry>          sAzeriteTierUnlockStore("AzeriteTierUnlock.db2", LoadInfo::AzeriteTierUnlockLoadInfo::Instance());
+DB2Storage<Structs::AzeritePowerEntry>               sAzeritePowerStore("AzeritePower.db2", LoadInfo::AzeritePowerLoadInfo::Instance());
+DB2Storage<Structs::AzeritePowerSetMemberEntry>      sAzeritePowerSetMember("AzeritePowerSetMember.db2", LoadInfo::AzeritePowerSetMemberLoadInfo::Instance());
 DB2Storage<AchievementEntry>                    sAchievementStore("Achievement.db2", AchievementLoadInfo::Instance());
 DB2Storage<AdventureJournalEntry>               sAdventureJournalStore("AdventureJournal.db2", AdventureJournalLoadInfo::Instance());
 DB2Storage<AnimationDataEntry>                  sAnimationDataStore("AnimationData.db2", AnimationDataLoadInfo::Instance());
@@ -521,6 +526,12 @@ void DB2Manager::LoadStores(std::string const& dataPath, uint32 defaultLocale)
 
 #define LOAD_DB2(store) LoadDB2(availableDb2Locales, bad_db2_files, _stores, &store, db2Path, defaultLocale, store)
 
+    LOAD_DB2(sAzeriteItemStore);
+    LOAD_DB2(sAzeriteEmpoweredItemStore);
+    LOAD_DB2(sAzeriteTierUnlockStore);
+    LOAD_DB2(sAzeritePowerSetMember);
+    LOAD_DB2(sAzeritePowerStore);
+    LOAD_DB2(sSpecSetMemberStore);
     LOAD_DB2(sAchievementStore);
     //LOAD_DB2(sAdventureJournalStore);
     LOAD_DB2(sAnimationDataStore);
@@ -782,6 +793,30 @@ void DB2Manager::LoadStores(std::string const& dataPath, uint32 defaultLocale)
     LOAD_DB2(sWorldSafeLocsStore);
 
 #undef LOAD_DB2
+
+for (uint32 i = 0; i < sAzeriteEmpoweredItemStore.GetNumRows(); ++i)
+    {
+        if (Structs::AzeriteEmpoweredItemEntry const* azerite = sAzeriteEmpoweredItemStore.LookupEntry(i))
+            sDB2Manager._empoweredItem[azerite->ItemID] = azerite;
+    }
+
+    for (uint32 i = 0; i < sAzeriteTierUnlockStore.GetNumRows(); ++i)
+    {
+        if (Structs::AzeriteTierUnlockEntry const* azerite = sAzeriteTierUnlockStore.LookupEntry(i))
+            sDB2Manager._azeriteTierUnlock[azerite->AzeriteTierUnlockSetId].push_back(azerite);
+    }
+
+    for (uint32 i = 0; i < sAzeritePowerSetMember.GetNumRows(); ++i)
+    {
+        if (Structs::AzeritePowerSetMemberEntry const* azerite = sAzeritePowerSetMember.LookupEntry(i))
+            sDB2Manager._azeritePowerSetMember[azerite->AzeritePowerSetID] = azerite;
+    }
+
+    for (uint32 i = 0; i < sSpecSetMemberStore.GetNumRows(); ++i)
+    {
+        if (Structs::SpecSetMemberEntry const* spec = sSpecSetMemberStore.LookupEntry(i))
+            sDB2Manager._specSetMember[spec->SpecSetMemberID].push_back(spec->CharSpecialization);
+    }
 
     for (AreaGroupMemberEntry const* areaGroupMember : sAreaGroupMemberStore)
         _areaGroupMembers[areaGroupMember->AreaGroupID].push_back(areaGroupMember->AreaID);
@@ -1344,6 +1379,29 @@ DB2StorageBase const* DB2Manager::GetStorage(uint32 type) const
         return itr->second;
 
     return nullptr;
+}
+
+void AfterLoadDatastores()
+{
+    // spells related
+    for (uint32 i = 0; i < sSpellNameStore.GetNumRows(); ++i)
+    {
+        if (SpellInfo * spellInfo = GET_SPELL(i))
+        {
+            // force send to client for spells with SPELL_EFFECT_LOOT, fixes bonus roll / toast interface
+            if (spellInfo->HasEffect(SPELL_EFFECT_LOOT)) // SPELL_EFFECT_LOOT
+            {
+                spellInfo->AttributesCuF |= std::Spells::Attributes::SEND_TO_CLIENT;
+                spellInfo->AttributesCuF |= std::Spells::Attributes::SEND_SPELL_START_EVEN_IF_TRIGGERED;
+                // and to have delay so rolling animation @ toast interface lasts longer
+                spellInfo->Speed = 1; // actual speed set in PROJECT::Hooks::Spells::prepare()
+            }
+        }
+    }
+
+    for (DBStorageIterator<ArtifactPowerRankEntry> itr = sArtifactPowerRankStore.begin(); itr != sArtifactPowerRankStore.end(); ++itr)
+        if (SpellInfo* spellInfo = GET_SPELL(itr->SpellID))
+            spellInfo->Variables.Set("IsArtifactSpell", true);
 }
 
 void DB2Manager::LoadHotfixData()
@@ -2834,6 +2892,39 @@ static DBCPosition2D CalculateGlobalUiMapPosition(int32 uiMapID, DBCPosition2D u
     }
 
     return uiPosition;
+}
+
+std::DataStores::Structs::AzeriteEmpoweredItemEntry const* DB2Manager::GetAzeriteEmpoweredItem(uint32 itemID) const
+{
+    auto itr = _empoweredItem.find(itemID);
+    if (itr == _empoweredItem.end())
+        return nullptr;
+
+    return itr->second;
+}
+
+std::DataStores::Structs::AzeriteTierUnlockEntry const*> DB2Manager::GetAzeriteTierUnlock(uint32 itemID) const
+{
+    auto item = GetAzeriteEmpoweredItem(itemID);
+    if (item)
+    {
+        auto itr = _azeriteTierUnlock.find(item->AzeriteTierUnlockSetID);
+        if (itr == _azeriteTierUnlock.end())
+            return {};
+
+        return itr->second;
+    }
+
+    return {};
+}
+
+uint32 DB2Manager::GetBonusListIDToAddItemLevel(uint32 value)
+{
+    auto itr = _itemLevelToBonusList.find(value);
+    if (itr != _itemLevelToBonusList.end())
+        return itr->second;
+
+    return 0;
 }
 
 bool DB2Manager::GetUiMapPosition(float x, float y, float z, int32 mapId, int32 areaId, int32 wmoDoodadPlacementId, int32 wmoGroupId, UiMapSystem system, bool local,

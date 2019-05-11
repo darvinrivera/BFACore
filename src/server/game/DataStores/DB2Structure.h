@@ -46,6 +46,48 @@ struct AchievementEntry
     int16 SharesCriteria;                                           // referenced achievement (counting of all completed criterias)
 };
 
+struct AzeriteEmpoweredItemEntry
+{
+   uint32 ID;
+   int32 ItemID;
+   int32 AzeriteTierUnlockSetID;
+   int32 AzeritePowerSetID;
+};
+
+struct AzeriteItemEntry
+{
+   uint32 ID;
+   int32 ItemID;
+};
+
+struct AzeriteTierUnlockEntry
+{
+   uint32 ID;
+   uint8 ItemCreationContext;
+   uint8 Tier;
+   uint8 AzeriteLevel;
+   uint8 AzeriteTierUnlockSetId;
+};
+
+struct AzeritePowerEntry
+{
+   uint32 ID;
+   int32 SpellID;
+   int32 ItemBonusListID;
+   int32 SpecSet;
+   int32 Unk0;
+};
+
+struct AzeritePowerSetMemberEntry
+{
+   uint32 ID;
+   int16 AzeritePowerID;
+   uint8 Class;
+   uint8 Tier;
+   uint8 OrderIndex;
+   uint16 AzeritePowerSetID;
+};
+
 struct AdventureJournalEntry
 {
     uint32 ID;
