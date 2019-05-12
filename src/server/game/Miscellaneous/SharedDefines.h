@@ -912,6 +912,13 @@ enum SpellAttr13
     SPELL_ATTR13_UNK23                           = 0x00800000  // 23
 };
 
+enum Attributes
+{
+    DONT_SEND_TO_CLIENT                = 0x00000010,   // don't send aura and SMSG_SPELLLOGEXECUTE to client
+    SEND_SPELL_START_EVEN_IF_TRIGGERED = 0x00000800,   // send SMSG_SPELL_START even if spell is cast triggered
+    SEND_TO_CLIENT                     = 0x00001000,   // always return true in Spell::IsNeedSendToClient()
+};
+
 #define MIN_SPECIALIZATION_LEVEL    10
 #define MAX_SPECIALIZATIONS         4
 #define PET_SPEC_OVERRIDE_CLASS_INDEX MAX_CLASSES
