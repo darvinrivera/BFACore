@@ -41,7 +41,7 @@ DB2Storage<AzeriteEmpoweredItemEntry>           sAzeriteEmpoweredItemStore("Azer
 DB2Storage<AzeriteTierUnlockEntry>              sAzeriteTierUnlockStore("AzeriteTierUnlock.db2", AzeriteTierUnlockLoadInfo::Instance());
 DB2Storage<AzeritePowerEntry>                   sAzeritePowerStore("AzeritePower.db2", AzeritePowerLoadInfo::Instance());
 DB2Storage<AzeritePowerSetMemberEntry>          sAzeritePowerSetMember("AzeritePowerSetMember.db2", AzeritePowerSetMemberLoadInfo::Instance());
-DB2Storage<SpecSetMemberEntry>                  sSpecSetMemberStore("SpecSetMember.db2",SpecSetMemberLoadInfo::Instance());
+DB2Storage<SpecSetMemberEntry>                  sSpecSetMemberStore("SpecSetMember.db2", SpecSetMemberLoadInfo::Instance());
 DB2Storage<AchievementEntry>                    sAchievementStore("Achievement.db2", AchievementLoadInfo::Instance());
 DB2Storage<AdventureJournalEntry>               sAdventureJournalStore("AdventureJournal.db2", AdventureJournalLoadInfo::Instance());
 DB2Storage<AnimationDataEntry>                  sAnimationDataStore("AnimationData.db2", AnimationDataLoadInfo::Instance());
@@ -388,7 +388,8 @@ namespace
     std::map<std::pair<uint32 /*tableHash*/, int32 /*recordId*/>, std::vector<uint8>> _hotfixBlob;
 
     AzeriteTierUnlockContainer _azeriteTierUnlock; 
-    AzeritePowerSetMemberContainer _azeritePowerSetMember; 
+    AzeritePowerSetMemberContainer _azeritePowerSetMember;
+    EmpoweredItemContainer _empoweredItem;
     SpecSetMemberContainer _specSetMember; \
     ItemLevelToBonusList _itemLevelToBonusList; 
     AreaGroupMemberContainer _areaGroupMembers;
@@ -1403,8 +1404,8 @@ void AfterLoadDatastores()
             // force send to client for spells with SPELL_EFFECT_LOOT, fixes bonus roll / toast interface
             if (spellInfo->HasEffect(SPELL_EFFECT_LOOT)) // SPELL_EFFECT_LOOT
             {
-                spellInfo->AttributesCuF |= std::Spells::Attributes::SEND_TO_CLIENT;
-                spellInfo->AttributesCuF |= std::Spells::Attributes::SEND_SPELL_START_EVEN_IF_TRIGGERED;
+                spellInfo->AttributesCuF |= SEND_TO_CLIENT;
+                spellInfo->AttributesCuF |= SEND_SPELL_START_EVEN_IF_TRIGGERED;
                 // and to have delay so rolling animation @ toast interface lasts longer
                 spellInfo->Speed = 1; // actual speed set in PROJECT::Hooks::Spells::prepare()
             }
@@ -2915,7 +2916,7 @@ static AzeriteEmpoweredItemEntry const* GetAzeriteEmpoweredItem(uint32 itemID)
     return itr->second;
 }
 
-void DB2Manager::GetAzeriteTierUnlock(uint32 itemID) const
+std::vector<AzeriteTierUnlockEntry const*> DB2Manager::GetAzeriteTierUnlock(uint32 itemID) const
 {
     auto item = GetAzeriteEmpoweredItem(itemID);
     if (item)

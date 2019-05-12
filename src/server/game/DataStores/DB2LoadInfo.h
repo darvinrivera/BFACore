@@ -133,6 +133,21 @@ struct AzeritePowerSetMemberLoadInfo
    }
 };
 
+struct SpecSetMemberLoadInfo
+{
+   static DB2LoadInfo const* Instance()
+   {
+     static DB2FieldMeta const fields[] =
+     {
+            { false, FT_INT, "ID" },
+            { true, FT_INT, "CharSpecialization" },
+            { true, FT_INT, "SpecSetMemberID" },
+     };
+     static DB2LoadInfo const loadInfo(&fields[0], std::extent<decltype(fields)>::value, SpecSetMemberMeta::Instance(), PROJECT_HOTFIX_SEL_SPEC_SET_MEMBER);
+     return &loadInfo;
+   }
+};
+
 struct AdventureJournalLoadInfo
 {
     static DB2LoadInfo const* Instance()
