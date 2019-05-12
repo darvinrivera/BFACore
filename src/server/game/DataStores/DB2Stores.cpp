@@ -41,6 +41,7 @@ DB2Storage<AzeriteEmpoweredItemEntry>           sAzeriteEmpoweredItemStore("Azer
 DB2Storage<AzeriteTierUnlockEntry>              sAzeriteTierUnlockStore("AzeriteTierUnlock.db2", AzeriteTierUnlockLoadInfo::Instance());
 DB2Storage<AzeritePowerEntry>                   sAzeritePowerStore("AzeritePower.db2", AzeritePowerLoadInfo::Instance());
 DB2Storage<AzeritePowerSetMemberEntry>          sAzeritePowerSetMember("AzeritePowerSetMember.db2", AzeritePowerSetMemberLoadInfo::Instance());
+DB2Storage<SpecSetMemberEntry>                  sSpecSetMemberStore("SpecSetMember.db2",SpecSetMemberLoadInfo::Instance());
 DB2Storage<AchievementEntry>                    sAchievementStore("Achievement.db2", AchievementLoadInfo::Instance());
 DB2Storage<AdventureJournalEntry>               sAdventureJournalStore("AdventureJournal.db2", AdventureJournalLoadInfo::Instance());
 DB2Storage<AnimationDataEntry>                  sAnimationDataStore("AnimationData.db2", AnimationDataLoadInfo::Instance());
@@ -2894,7 +2895,7 @@ static DBCPosition2D CalculateGlobalUiMapPosition(int32 uiMapID, DBCPosition2D u
     return uiPosition;
 }
 
-void DB2Manager::GetAzeriteEmpoweredItem(uint32 itemID) const
+static AzeriteEmpoweredItemEntry const* GetAzeriteEmpoweredItem(uint32 itemID)
 {
     auto itr = _empoweredItem.find(itemID);
     if (itr == _empoweredItem.end())
