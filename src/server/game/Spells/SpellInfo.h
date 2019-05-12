@@ -568,7 +568,7 @@ class TC_GAME_API SpellInfo
 
         bool HasChannelInterruptFlag(SpellChannelInterruptFlags flag) const { return (ChannelInterruptFlags[AuraInterruptFlagIndex<SpellAuraInterruptFlags>::value] & flag) != 0; }
 
-        bool HasAttribute(SpellAttributes customAttribute) const { return !!(AttributesCuF & customAttribute); }
+        bool HasAttribute(Attributes customAttribute) const { return !!(AttributesCuF & customAttribute); }
 
         bool IsExplicitDiscovery() const;
         bool IsLootCrafting() const;
