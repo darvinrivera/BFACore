@@ -3189,7 +3189,11 @@ bool Spell::prepare(SpellCastTargets const* targets, AuraEffect const* triggered
     /// @todoApply this to all cast spells if needed
     // Why check duration? 29350: channelled triggers channelled
     if ((_triggeredCastFlags & TRIGGERED_CAST_DIRECTLY) && (!m_spellInfo->IsChanneled() || !m_spellInfo->GetMaxDuration()))
+    {
+        if (m_spellInfo->HasAttribute(SEND_SPELL_START_EVEN_IF_TRIGGERED))
+            SendSpellStart();
         cast(true);
+    }
     else
     {
         // stealth must be removed at cast starting (at show channel bar)
