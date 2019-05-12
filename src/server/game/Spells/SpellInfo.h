@@ -348,6 +348,7 @@ public:
     uint32    TriggerSpell;
     flag128   SpellClassMask;
     float     BonusCoefficientFromAP;
+    uint32    Attributes;
     std::vector<Condition*>* ImplicitTargetConditions;
     // SpellScalingEntry
     struct ScalingInfo
@@ -458,6 +459,7 @@ class TC_GAME_API SpellInfo
         uint32 AttributesEx12;
         uint32 AttributesEx13;
         uint32 AttributesCu;
+        uint32 AttributesCuF;
         uint64 Stances;
         uint64 StancesNot;
         uint32 Targets;
@@ -565,6 +567,8 @@ class TC_GAME_API SpellInfo
         bool HasAuraInterruptFlag(SpellAuraInterruptFlags2 flag) const { return (AuraInterruptFlags[AuraInterruptFlagIndex<SpellAuraInterruptFlags2>::value] & flag) != 0; }
 
         bool HasChannelInterruptFlag(SpellChannelInterruptFlags flag) const { return (ChannelInterruptFlags[AuraInterruptFlagIndex<SpellAuraInterruptFlags>::value] & flag) != 0; }
+
+        bool HasAttribute(SpellAttributes customAttribute) const { return !!(AttributesCuF & customAttribute); }
 
         bool IsExplicitDiscovery() const;
         bool IsLootCrafting() const;

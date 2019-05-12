@@ -760,7 +760,7 @@ void WorldPackets::Misc::SetWarMode::Read()
     Enabled = _worldPacket.ReadBit();
 }
 
-WorldPacket::Misc::AzeriteXpGain::Write()
+WorldPacket const* WorldPackets::Misc::AzeriteXpGain::Write()
 {
     _worldPacket << AzeriteGUID;
     _worldPacket << XP;
@@ -768,7 +768,7 @@ WorldPacket::Misc::AzeriteXpGain::Write()
     return &_worldPacket;
 }
 
-void WorldPacket::Misc::AzeriteEmpoweredItemSelectPower::Read()
+void WorldPackets::Misc::AzeriteEmpoweredItemSelectPower::Read()
 {
     _worldPacket >> Tier;
     _worldPacket >> AzeritePowerID;
@@ -776,7 +776,7 @@ void WorldPacket::Misc::AzeriteEmpoweredItemSelectPower::Read()
     _worldPacket >> Slot;
 }
 
-WorldPacket::Misc::AzeriteEmpoweredItemRespecOpen::Write()
+WorldPacket const* WorldPackets::Misc::AzeriteEmpoweredItemRespecOpen::Write()
 {
     _worldPacket << UnitGUID;
 

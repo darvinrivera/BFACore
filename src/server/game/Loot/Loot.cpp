@@ -60,6 +60,7 @@ LootItem::LootItem(LootStoreItem const& li)
         randomSuffix = GenerateEnchSuffixFactor(itemid);
         randomPropertyId = GenerateItemRandomPropertyId(itemid);
         upgradeId = sDB2Manager.GetRulesetItemUpgrade(itemid);
+        BonusListIDs = li.bonusList;
     }
 
     context = 0;
