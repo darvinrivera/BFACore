@@ -7127,6 +7127,18 @@ bool Spell::IsAutoActionResetSpell() const
 
 bool Spell::IsNeedSendToClient() const
 {
+    if (Player * player = GetCaster()->ToPlayer())
+        if (player->Variables.IsSet("Spells.DontSendNextSpellToClient"))
+        {
+            player->Variables.Remove("Spells.DontSendNextSpellToClient");
+            return false;
+        }
+
+    if (m_spellInfo->HasAttribute(SEND_TO_CLIENT))
+        return true;
+    if (m_spellInfo->HasAttribute(DONT_SEND_TO_CLIENT))
+        return false;
+
     return m_SpellVisual || m_spellInfo->IsChanneled() ||
         (m_spellInfo->HasAttribute(SPELL_ATTR8_AURA_SEND_AMOUNT)) || m_spellInfo->Speed > 0.0f || (!m_triggeredByAuraSpell && !IsTriggered());
 }
