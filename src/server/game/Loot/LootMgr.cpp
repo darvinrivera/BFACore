@@ -68,6 +68,7 @@ struct LootGroupInvalidSelector : public std::unary_function<LootStoreItem*, boo
         uint8 foundDuplicates = 0;
         for (std::vector<LootItem>::const_iterator itr = _loot.items.begin(); itr != _loot.items.end(); ++itr)
             if (itr->itemid == item->itemid)
+                if (item->bonusList.empty())
                 if (++foundDuplicates == _loot.maxDuplicates)
                     return true;
 
@@ -135,7 +136,7 @@ uint32 LootStore::LoadLootTable()
     Clear();
 
     //                                                  0     1            2               3         4         5             6
-    QueryResult result = WorldDatabase.PQuery("SELECT Entry, Item, Reference, Chance, QuestRequired, LootMode, GroupId, MinCount, MaxCount FROM %s", GetName());
+    QueryResult result = WorldDatabase.PQuery("SELECT Entry, Item, Reference, Chance, QuestRequired, LootMode, GroupId, MinCount, MaxCount, BonusList FROM %s", GetName());
 
     if (!result)
         return 0;
