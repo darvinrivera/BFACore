@@ -320,6 +320,7 @@ struct ItemLevelSelectorQualityEntryComparator
     static bool Compare(ItemLevelSelectorQualityEntry const* left, ItemLevelSelectorQualityEntry const* right);
 };
 
+
 typedef std::map<uint32 /*hash*/, DB2StorageBase*> StorageMap;
 typedef std::unordered_map<uint32 /*areaGroupId*/, std::vector<uint32/*areaId*/>> AreaGroupMemberContainer;
 typedef std::unordered_map<uint32, std::vector<ArtifactPowerEntry const*>> ArtifactPowersContainer;
@@ -365,6 +366,12 @@ typedef std::vector<TalentEntry const*> TalentsByPosition[MAX_CLASSES][MAX_TALEN
 typedef std::unordered_set<uint32> ToyItemIdsContainer;
 typedef std::tuple<uint16, uint8, int32> WMOAreaTableKey;
 typedef std::map<WMOAreaTableKey, WMOAreaTableEntry const*> WMOAreaTableLookupContainer;
+typedef std::unordered_map<uint32/*item*/, AzeriteEmpoweredItemEntry const*> EmpoweredItemContainer;
+typedef std::unordered_map<uint32/*AzeriteTierUnlock*/, std::vector<AzeriteTierUnlockEntry const*>> AzeriteTierUnlockContainer;
+typedef std::unordered_map<uint32/*AzeritePowerMember*/, AzeritePowerSetMemberEntry const*> AzeritePowerSetMemberContainer;
+typedef std::unordered_map<uint32 /* SpecSetMemberID*/, std::vector<uint32>> SpecSetMemberContainer;
+typedef std::map<int32/*itemlevel*/, uint32/*bonus*/> ItemLevelToBonusList;
+
 
 namespace
 {
@@ -380,6 +387,10 @@ namespace
     std::map<uint64, int32> _hotfixData;
     std::map<std::pair<uint32 /*tableHash*/, int32 /*recordId*/>, std::vector<uint8>> _hotfixBlob;
 
+    AzeriteTierUnlockContainer _azeriteTierUnlock; 
+    AzeritePowerSetMemberContainer _azeritePowerSetMember; 
+    SpecSetMemberContainer _specSetMember; \
+    ItemLevelToBonusList _itemLevelToBonusList; 
     AreaGroupMemberContainer _areaGroupMembers;
     ArtifactPowersContainer _artifactPowers;
     ArtifactPowerLinksContainer _artifactPowerLinks;
