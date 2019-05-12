@@ -274,6 +274,7 @@ public:
     typedef std::unordered_map<uint32, std::unordered_map<uint32, MapDifficultyEntry const*>> MapDifficultyContainer;
     typedef std::set<MountTypeXCapabilityEntry const*, MountTypeXCapabilityEntryComparator> MountTypeXCapabilitySet;
     typedef std::vector<MountXDisplayEntry const*> MountXDisplayContainer;
+ 
 
     static DB2Manager& Instance();
 
@@ -372,6 +373,11 @@ public:
     void Map2ZoneCoordinates(uint32 areaId, float& x, float& y) const;
     bool IsUiMapPhase(uint32 phaseId) const;
     WMOAreaTableEntry const* GetWMOAreaTable(int32 rootId, int32 adtId, int32 groupId) const;
+    AzeriteEmpoweredItemEntry const* GetAzeriteEmpoweredItem(uint32 itemID) const;
+
+    std::vector<AzeriteTierUnlockEntry const*> GetAzeriteTierUnlock(uint32 itemID) const;
+    uint32 GetBonusListIDToAddItemLevel(uint32 value);
+    ItemBonusListContainer GetItemBonusListDB2();
 
 private:
     friend class DB2HotfixGeneratorBase;
