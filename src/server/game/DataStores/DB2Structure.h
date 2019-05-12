@@ -88,6 +88,13 @@ struct AzeritePowerSetMemberEntry
    uint16 AzeritePowerSetID;
 };
 
+struct SpecSetMemberEntry
+{
+    uint32 ID;
+    uint32 CharSpecialization;
+    uint32 SpecSetMemberID;
+};
+
 struct AdventureJournalEntry
 {
     uint32 ID;
