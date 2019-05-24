@@ -994,9 +994,9 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder* holder)
                         case RACE_DARK_IRON_DWARF:
                             pCurrChar->GetSceneMgr().PlayScene(2137);
                             break;
-                        //case RACE_MAGHAR_ORC: 
-                          //  pCurrChar->GetSceneMgr().PlayScene(2085); 
-                          //  break;
+                        case RACE_MAGHAR_ORC: 
+                            pCurrChar->GetSceneMgr().PlaySceneByPackageId(2085); 
+                            break;
                         default:
                             break;
                     }
