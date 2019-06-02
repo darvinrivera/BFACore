@@ -1899,6 +1899,8 @@ public:
     }
 };
 
+// 131623 - spell_warl_twilight_ward_s12
+
 class spell_warl_twilight_ward_s12 : public SpellScriptLoader
 {
 public:
