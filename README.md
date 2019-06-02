@@ -8,8 +8,6 @@
 
 -- Repack v24.04.2019 https://mega.nz/#!GQVHFK6Y!XNbFYLE2Z36VM19LziPzEs1ZunEBiXrIM2XIKWQ_Rfg
 
--- MySQL NEW https://drive.google.com/open?id=1SksI9MgQ9B7Luu2YzOVTRA2_Uh5t2cWL
-
 -- Data for 8.0.1 (28153) https://mega.nz/#!rAlAXCoQ!pc8UwV0H3DuZvgHhFPDvCSYqP1cCSjrZ9CiyukU_YzU
 
 -- Launcher for Client 8.0.1 (28153) https://mega.nz/#!iU0kjQCI!LmpdMfQg0pcik1ouS3mpYEbCuL4EdGt1lKzoLtNYDdM  thanks to Arctum team
