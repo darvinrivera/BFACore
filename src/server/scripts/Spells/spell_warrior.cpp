@@ -2933,6 +2933,34 @@ struct npc_warr_ravager : public ScriptedAI
     }
 };
 
+/// Execute - 5308 (Prot, Fury, Default)
+/// last update : 8.0.1 by @zgn
+
+class spell_warr_execute_default: public SpellScript
+{
+    PrepareSpellScript(spell_warr_execute_default);
+
+    void HandleOnCast()
+    {
+        Player* caster = GetCaster()->ToPlayer();
+        Unit* target = GetExplTargetUnit();
+        if (!caster || !target)
+            return;
+
+        uint32 _spec = GetCaster()->GetUInt32Value(PLAYER_FIELD_CURRENT_SPEC_ID);
+        if (_spec == TALENT_SPEC_WARRIOR_ARMS)
+            caster->CastSpell(target, SPELL_WARRIOR_EXECUTE, true);
+
+		if (_spec == TALENT_SPEC_WARRIOR_FURY)
+            caster->CastSpell(target, SPELL_WARRIOR_EXECUTE_OFF_HAND, true);
+    }
+
+    void Register() override
+    {
+        OnCast += SpellCastFn(spell_warr_execute_default::HandleOnCast);
+    }
+};
+
 void AddSC_warrior_spell_scripts()
 {
     new spell_warr_berzerker_rage();
@@ -3004,6 +3032,6 @@ void AddSC_warrior_spell_scripts()
     RegisterSpellScript(spell_warr_ravager_damage);
     RegisterSpellScript(spell_warr_execute);
     RegisterAuraScript(aura_warr_war_machine);
-
+    new spell_warr_execute_default();
     RegisterCreatureAI(npc_warr_ravager);
 }
