@@ -2935,31 +2935,43 @@ struct npc_warr_ravager : public ScriptedAI
 };
 
 /// Execute - 5308 (Prot, Fury, Default)
-/// last update : 8.0.1 by @zgn
+/// last update : 8.0.1
 
-class spell_warr_execute_default: public SpellScript
+class spell_warr_execute_default: public SpellScriptLoader
 {
-    PrepareSpellScript(spell_warr_execute_default);
+    public:
+        spell_warr_execute_default() : SpellScriptLoader("spell_warr_execute_default") { }
 
-    void HandleOnCast()
-    {
-        Player* caster = GetCaster()->ToPlayer();
-        Unit* target = GetExplTargetUnit();
-        if (!caster || !target)
-            return;
+        class spell_warr_execute_default_SpellScript : public SpellScript
+        {
+            PrepareSpellScript(spell_warr_execute_default_SpellScript);
 
-        uint32 _spec = GetCaster()->GetUInt32Value(PLAYER_FIELD_CURRENT_SPEC_ID);
-        if (_spec == TALENT_SPEC_WARRIOR_ARMS)
-            caster->CastSpell(target, SPELL_WARRIOR_EXECUTE, true);
+            enum ExecuteSpells
+            {
+                SpellWarrExecuteOffHand = 163558
+            };
 
-		if (_spec == TALENT_SPEC_WARRIOR_FURY)
-            caster->CastSpell(target, SPELL_WARRIOR_EXECUTE_OFF_HAND, true);
-    }
+            void HandleOnCast()
+            {
+                Player* l_Caster = GetCaster()->ToPlayer();
+                Unit* l_Target = GetExplTargetUnit();
+                if (!l_Caster || !l_Target)
+                    return;
 
-    void Register() override
-    {
-        OnCast += SpellCastFn(spell_warr_execute_default::HandleOnCast);
-    }
+                if (l_Caster->GetSpecializationId(l_Caster->GetActiveSpec()) == SPEC_WARRIOR_FURY)
+                    l_Caster->CastSpell(l_Target, ExecuteSpells::SpellWarrExecuteOffHand, true);
+            }
+
+            void Register()
+            {
+                OnCast += SpellCastFn(spell_warr_execute_default_SpellScript::HandleOnCast);
+            }
+        };
+
+        SpellScript* GetSpellScript() const
+        {
+            return new spell_warr_execute_default_SpellScript();
+        }
 };
 
 void AddSC_warrior_spell_scripts()
