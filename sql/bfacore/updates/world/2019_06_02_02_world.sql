@@ -24,7 +24,7 @@ REPLACE INTO `spell_script_names` (`spell_id`, `ScriptName`) VALUES
 (974, 'spell_sha_earth_shield'),
 (50720, 'spell_warr_vigilance'),
 (50720, 'spell_warr_vigilance'),
-(61882, 'aura_sha_earthquake');
+(61882, 'aura_sha_earthquake'),
 (20230, 'spell_warr_retaliation'),
 (94009, 'spell_warr_rend'),
 (59725, 'spell_warr_improved_spell_reflection'),
