@@ -70,7 +70,7 @@ enum WarriorSpells
     SPELL_WARRIOR_ENRAGE                            = 184361,
     SPELL_WARRIOR_ENRAGE_AURA                       = 184362,
     SPELL_WARRIOR_EXECUTE                           = 163201,
-	SPELL_WARRIOR_EXECUTE_OFF_HAND                  = 280849,
+	SPELL_WARRIOR_EXECUTE_OFF_HAND                  = 163558,
     SPELL_WARRIOR_EXECUTE_PVP                       = 217955,
     SPELL_WARRIOR_FOCUSED_RAGE_ARMS                 = 207982,
     SPELL_WARRIOR_FOCUSED_RAGE_PROTECTION           = 204488,
