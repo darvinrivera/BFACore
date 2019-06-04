@@ -667,9 +667,7 @@ bool StartDB()
         .AddDatabase(LoginDatabase, "Login")
         .AddDatabase(CharacterDatabase, "Character")
         .AddDatabase(WorldDatabase, "World")
-        .AddDatabase(HotfixDatabase, "Hotfix")
-        .AddDatabase(ShopDatabase, "Shop");
-
+        .AddDatabase(HotfixDatabase, "Hotfix");
     if (!loader.Load())
         return false;
 
