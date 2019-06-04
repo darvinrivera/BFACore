@@ -1153,21 +1153,16 @@ void WorldSession::HandleCloseInteraction(WorldPackets::Misc::CloseInteraction& 
 
 void WorldSession::HandleAdventureOpenQuest(WorldPackets::Misc::AdventureJournalOpenQuest& packet)
 {
-    if (AdventureJournalEntry const* entry = sAdventureJournalStore.LookupEntry(packet.entryId))    
-        if (Quest const* quest = sObjectMgr->GetQuestTemplate(entry->QuestID))                      
-            if (!_player->hasQuest(entry->QuestID) && _player->CanTakeQuest(quest, true))           
-                if (WorldSession * session = _player->GetSession())                                 
-                {
-                    PlayerMenu menu(session);
-                    menu.SendQuestGiverQuestDetails(quest, _player->GetGUID(), true, false);
-                }
-}
+    AdventureJournalEntry const* l_Entry = sAdventureJournalStore.LookupEntry(packet.entryId);
+    if (!l_Entry)
+        return;
 
-void WorldSession::HandleAdventureJournalStartQuest(WorldPackets::Misc::AdventureJournalStartQuest& packet)
-{
-    if (Quest const* quest = sObjectMgr->GetQuestTemplate(packet.QuestID))
-        if (!_player->hasQuest(packet.QuestID))
-            _player->AddQuest(quest, nullptr);
+    Quest const* l_Quest = sObjectMgr->GetQuestTemplate(l_Entry->QuestID);
+    if (!l_Quest)
+        return;
+
+    if (_player->CanTakeQuest(l_Quest, true))
+        _player->PlayerTalkClass->SendQuestGiverQuestDetails(l_Quest, _player->GetGUID(), false, true);
 }
 
 void WorldSession::HandleSelectFactionOpcode(WorldPackets::Misc::FactionSelect& selectFaction)
