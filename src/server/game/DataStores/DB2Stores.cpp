@@ -316,6 +316,7 @@ struct ItemLevelSelectorQualityEntryComparator
 
 typedef std::map<uint32 /*hash*/, DB2StorageBase*> StorageMap;
 typedef std::unordered_map<uint32 /*areaGroupId*/, std::vector<uint32/*areaId*/>> AreaGroupMemberContainer;
+typedef std::unordered_map<uint32, std::vector<AdventureJournalEntry const*>> AdventureJournalContainer;
 typedef std::unordered_map<uint32, std::vector<ArtifactPowerEntry const*>> ArtifactPowersContainer;
 typedef std::unordered_map<uint32, std::unordered_set<uint32>> ArtifactPowerLinksContainer;
 typedef std::unordered_map<std::pair<uint32, uint8>, ArtifactPowerRankEntry const*> ArtifactPowerRanksContainer;
