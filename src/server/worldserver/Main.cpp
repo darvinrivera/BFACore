@@ -30,6 +30,7 @@
 #include "Configuration/Config.h"
 #include "DatabaseEnv.h"
 #include "DatabaseLoader.h"
+#include "DeadlineTimer.h"
 #include "GitRevision.h"
 #include "InstanceSaveMgr.h"
 #include "IoContext.h"
@@ -46,13 +47,11 @@
 #include "ScriptMgr.h"
 #include "ScriptReloadMgr.h"
 #include "TCSoap.h"
-#include "RESTService.h"
 #include "World.h"
 #include "WorldSocket.h"
 #include "WorldSocketMgr.h"
 #include <openssl/opensslv.h>
 #include <openssl/crypto.h>
-#include <boost/asio/deadline_timer.hpp>
 #include <boost/asio/signal_set.hpp>
 #include <boost/filesystem/operations.hpp>
 #include <boost/program_options.hpp>
@@ -103,7 +102,7 @@ public:
     static void Handler(std::weak_ptr<FreezeDetector> freezeDetectorRef, boost::system::error_code const& error);
 
 private:
-    boost::asio::deadline_timer _timer;
+    Trinity::Asio::DeadlineTimer _timer;
     uint32 _worldLoopCounter;
     uint32 _lastChangeMsTime;
     uint32 _maxCoreStuckTimeInMs;
@@ -326,16 +325,6 @@ extern int main(int argc, char** argv)
         return 1;
     }
 
-    if (sConfigMgr->GetBoolDefault("WorldREST.Enabled", false))
-    {
-        if (!sRestService.Start())
-        {
-            TC_LOG_ERROR("server.worldserver", "Failed to initialize Rest service");
-            return 1;
-        }
-    }
-
-    std::shared_ptr<void> sRestServiceHandle(nullptr, [](void*) { sRestService.Stop(); });
 
     std::shared_ptr<void> sWorldSocketMgrHandle(nullptr, [](void*)
     {
@@ -393,8 +382,6 @@ extern int main(int argc, char** argv)
     threadPool.reset();
 
     sLog->SetSynchronous();
-
-    sRestService.Stop();
 
     sScriptMgr->OnShutdown();
 
@@ -680,7 +667,8 @@ bool StartDB()
         .AddDatabase(LoginDatabase, "Login")
         .AddDatabase(CharacterDatabase, "Character")
         .AddDatabase(WorldDatabase, "World")
-        .AddDatabase(HotfixDatabase, "Hotfix");
+        .AddDatabase(HotfixDatabase, "Hotfix")
+        .AddDatabase(ShopDatabase, "Shop");
 
     if (!loader.Load())
         return false;

@@ -84,9 +84,6 @@ public:
             return false;
         }
 
-        // Opening a socket acceptor with the SO_REUSEADDR option enabled.
-        _acceptor.set_option(boost::asio::ip::tcp::acceptor::reuse_address(true));
-
         _acceptor.bind(_endpoint, errorCode);
         if (errorCode)
         {
@@ -111,14 +108,6 @@ public:
 
         boost::system::error_code err;
         _acceptor.close(err);
-        if (err)
-            TC_LOG_INFO("network", "Failed to close acceptor : %s", err.message().c_str());
-        _socket.shutdown(boost::asio::ip::tcp::socket::shutdown_both, err);
-        if (err)
-            TC_LOG_INFO("network", "Failed to shutdown socket : %s", err.message().c_str());
-        _socket.close(err);
-        if (err)
-            TC_LOG_INFO("network", "Failed to close socket : %s", err.message().c_str());
     }
 
     void SetSocketFactory(std::function<std::pair<tcp::socket*, uint32>()> func) { _socketFactory = func; }
