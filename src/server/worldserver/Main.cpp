@@ -668,6 +668,7 @@ bool StartDB()
         .AddDatabase(CharacterDatabase, "Character")
         .AddDatabase(WorldDatabase, "World")
         .AddDatabase(HotfixDatabase, "Hotfix");
+		
     if (!loader.Load())
         return false;
 
