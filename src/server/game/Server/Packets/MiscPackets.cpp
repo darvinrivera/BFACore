@@ -725,11 +725,6 @@ void WorldPackets::Misc::AdventureJournalOpenQuest::Read()
     _worldPacket >> entryId;
 }
 
-void WorldPackets::Misc::AdventureJournalStartQuest::Read()
-{
-    _worldPacket >> QuestID;
-}
-
 WorldPacket const* WorldPackets::Misc::StartTimer::Write()
 {
     _worldPacket << TimeLeft;
