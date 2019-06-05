@@ -955,7 +955,7 @@ namespace WorldPackets
 
             void Read() override;
 
-            uint32 AdventureJournalID;
+            int32 entryId;
         };
 
         class AdventureJournalStartQuest final : public ClientPacket
@@ -965,7 +965,7 @@ namespace WorldPackets
 
             void Read() override;
 
-            uint32 QuestID;
+            int32 QuestID;
         };
 
         class FactionSelectUI final : public ServerPacket

@@ -43,6 +43,12 @@ void HotfixDatabaseConnection::DoPrepareStatements()
 
     // AnimationData.db2
     PrepareStatement(HOTFIX_SEL_ANIMATION_DATA, "SELECT ID, Fallback, BehaviorTier, BehaviorID, Flags1, Flags2 FROM animation_data ORDER BY ID DESC", CONNECTION_SYNCH);
+	
+	// AdventureJournal.db2
+    PrepareStatement(HOTFIX_SEL_ADVENTURE_JOURNAL, "SELECT ID, Name, Description, ButtonText, RewardDescription, ContinueDescription, Type, PlayerCondition, Flags, ButtonActionType, "
+        "TextureFileDataID, LfgDungeonID, QuestID, BattleMasterListID, PriorityMin, PriorityMax, ItemID, ItemQuantity, "
+        "CurrencyType, CurrencyQuantity, UIMapID, BonusPlayerConditionID1, BonusPlayerConditionID2, BonusValue1, BonusValue2 FROM adventure_journal ORDER BY ID DESC", CONNECTION_SYNCH);
+    PREPARE_LOCALE_STMT(HOTFIX_SEL_ADVENTURE_JOURNAL, "SELECT ID, Name_lang, Description_lang, ButtonText_lang, RewardDescription_lang, ContinueDescription_lang FROM adventure_journal_locale WHERE locale = ?", CONNECTION_SYNCH);
 
     // AnimKit.db2
     PrepareStatement(HOTFIX_SEL_ANIM_KIT, "SELECT ID, OneShotDuration, OneShotStopAnimKitID, LowDefAnimKitID FROM anim_kit ORDER BY ID DESC", CONNECTION_SYNCH);

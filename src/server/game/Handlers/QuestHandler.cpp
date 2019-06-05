@@ -127,7 +127,7 @@ void WorldSession::HandleQuestgiverAcceptQuestOpcode(WorldPackets::Quest::QuestG
     if (Player* playerQuestObject = object->ToPlayer())
     {
         if (_player->GetGUID() != packet.QuestGiverGUID &&
-          ((_player->GetDivider().IsEmpty() && _player->GetDivider() != packet.QuestGiverGUID) || !playerQuestObject->CanShareQuest(packet.QuestID)))
+            ((_player->GetDivider().IsEmpty() && _player->GetDivider() != packet.QuestGiverGUID) || !playerQuestObject->CanShareQuest(packet.QuestID)))
         {
             CLOSE_GOSSIP_CLEAR_DIVIDER();
             return;

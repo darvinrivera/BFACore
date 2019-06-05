@@ -330,7 +330,7 @@ void InstanceSaveManager::LoadResetTimes()
     typedef std::pair<ResetTimeMapDiffInstances::const_iterator, ResetTimeMapDiffInstances::const_iterator> ResetTimeMapDiffInstancesBounds;
     ResetTimeMapDiffInstances mapDiffResetInstances;
 
-    QueryResult result = CharacterDatabase.Query("SELECT id, map, difficulty, resettime FROM instance ORDER BY id ASC");
+    QueryResult result = CharacterDatabase.Query("SELECT id, map, resettime, difficulty FROM instance ORDER BY id ASC");
     if (result)
     {
         do
@@ -389,16 +389,16 @@ void InstanceSaveManager::LoadResetTimes()
     {
         do
         {
-            Field* fields = result->Fetch();
-            uint32 mapid = fields[0].GetUInt16();
-            Difficulty difficulty = Difficulty(fields[1].GetUInt8());
-            uint64 oldresettime = fields[2].GetUInt32();
+            Field* fields           = result->Fetch();
+            uint32 mapid            = fields[0].GetUInt16();
+            uint8 difficulty        = fields[1].GetUInt8();
+            uint64 oldresettime     = fields[2].GetUInt32();
 
-            MapDifficultyEntry const* mapDiff = sDB2Manager.GetMapDifficultyData(mapid, difficulty);
+            MapDifficultyEntry const* mapDiff = sDB2Manager.GetMapDifficultyData(mapid, (Difficulty)difficulty);
             if (!mapDiff)
             {
                 TC_LOG_ERROR("misc", "InstanceSaveManager::LoadResetTimes: invalid mapid(%u)/difficulty(%u) pair in instance_reset!", mapid, difficulty);
-                CharacterDatabase.DirectPExecute("DELETE FROM instance_reset WHERE mapid = '%u' AND difficulty = '%u'", mapid, difficulty);
+                CharacterDatabase.DirectPExecute("DELETE FROM `instance_reset` WHERE `mapid` = '%u' AND `difficulty` = '%u'", mapid, difficulty);
                 continue;
             }
 
@@ -407,7 +407,7 @@ void InstanceSaveManager::LoadResetTimes()
             if (oldresettime != newresettime)
                 CharacterDatabase.DirectPExecute("UPDATE instance_reset SET resettime = '%u' WHERE mapid = '%u' AND difficulty = '%u'", uint32(newresettime), mapid, difficulty);
 
-            InitializeResetTimeFor(mapid, difficulty, newresettime);
+            InitializeResetTimeFor(mapid, (Difficulty)difficulty, newresettime);
         } while (result->NextRow());
     }
 

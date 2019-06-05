@@ -722,7 +722,7 @@ void WorldPackets::Misc::FactionSelect::Read()
 
 void WorldPackets::Misc::AdventureJournalOpenQuest::Read()
 {
-    _worldPacket >> AdventureJournalID;
+    _worldPacket >> entryId;
 }
 
 void WorldPackets::Misc::AdventureJournalStartQuest::Read()
