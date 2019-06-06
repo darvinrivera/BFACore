@@ -470,7 +470,7 @@ WorldPacket const* WorldPackets::Garrison::GarrisonStartMissionResult::Write()
     _worldPacket << FailReason;
     _worldPacket << Mission;
 
-    _worldPacket << Followers.size();
+    _worldPacket << uint32(Followers.size());
     for (uint64 followerDbID : Followers)
         _worldPacket << followerDbID;
 
