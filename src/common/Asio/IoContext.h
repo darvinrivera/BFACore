@@ -35,7 +35,7 @@ namespace Trinity
 {
     namespace Asio
     {
-        class IoContext
+        class IoContext: public IoContextBaseNamespace::IoContextBase
         {
         public:
             IoContext() : _impl() { }
