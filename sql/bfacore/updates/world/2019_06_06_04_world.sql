@@ -1,0 +1,1 @@
+ALTER TABLE `smart_scripts` ADD `event_param5` INT UNSIGNED DEFAULT 0 NULL AFTER `event_param4`;
