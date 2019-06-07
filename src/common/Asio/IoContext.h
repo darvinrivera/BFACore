@@ -35,7 +35,7 @@ namespace Trinity
 {
     namespace Asio
     {
-        class IoContext: public IoContextBaseNamespace::IoContextBase
+        class IoContext
         {
         public:
             IoContext() : _impl() { }
@@ -44,6 +44,9 @@ namespace Trinity
             operator IoContextBaseNamespace::IoContextBase&() { return _impl; }
             operator IoContextBaseNamespace::IoContextBase const&() const { return _impl; }
 
+
+            bool stopped() const { return _impl.stopped(); }
+            void restart() { _impl.restart(); }
             std::size_t run() { return _impl.run(); }
             void stop() { _impl.stop(); }
 
