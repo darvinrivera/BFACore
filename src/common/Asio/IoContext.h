@@ -46,7 +46,13 @@ namespace Trinity
 
 
             bool stopped() const { return _impl.stopped(); }
-            void restart() { _impl.restart(); }
+
+#if BOOST_VERSION >= 106600
+                void restart() { _impl.restart(); }
+#else
+                void reset() { _impl.reset(); }
+#endif
+
             std::size_t run() { return _impl.run(); }
             void stop() { _impl.stop(); }
 
