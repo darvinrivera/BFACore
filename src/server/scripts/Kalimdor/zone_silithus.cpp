@@ -1548,7 +1548,7 @@ struct go_azeroth_heart_chamber_teleport_pad : public GameObjectAI
 {
     go_azeroth_heart_chamber_teleport_pad(GameObject* go) : GameObjectAI(go) { }
 
-    bool IsNeverVisibleFor(WorldObject const* seer) override
+    bool IsNeverVisibleFor(WorldObject const* seer)
     {
         Player const* player = seer->ToPlayer();
         if (!player)
