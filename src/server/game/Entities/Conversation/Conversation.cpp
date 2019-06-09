@@ -25,7 +25,7 @@
 #include "Unit.h"
 #include "UpdateData.h"
 
-Conversation::Conversation() : WorldObject(false), _duration(0), _textureKitId(0)
+Conversation::Conversation() : WorldObject(false), _duration(0), _relocateTick(CONVERSATION_RELOCATE_TICK), _textureKitId(0)
 {
     m_objectType |= TYPEMASK_CONVERSATION;
     m_objectTypeId = TYPEID_CONVERSATION;
@@ -76,6 +76,16 @@ void Conversation::Update(uint32 diff)
     else
         Remove(); // expired
 
+    if (_relocateTick <= diff)
+    {
+        if (Unit* creator = ObjectAccessor::GetUnit(*this, GetCreatorGuid()))
+            Relocate(*creator);
+
+        _relocateTick = CONVERSATION_RELOCATE_TICK;
+    }
+    else
+        _relocateTick -= diff;
+
     WorldObject::Update(diff);
 }
 
@@ -83,6 +93,7 @@ void Conversation::Remove()
 {
     if (IsInWorld())
     {
+        sScriptMgr->OnConversationRemove(this, ObjectAccessor::GetUnit(*this, GetCreatorGuid()));
         AddObjectToRemoveList(); // calls RemoveFromWorld
     }
 }
@@ -125,6 +136,8 @@ bool Conversation::Create(ObjectGuid::LowType lowGuid, uint32 conversationEntry,
     SetUInt32Value(CONVERSATION_LAST_LINE_END_TIME, conversationTemplate->LastLineEndTime);
     _duration = conversationTemplate->LastLineEndTime;
     _textureKitId = conversationTemplate->TextureKitId;
+
+    m_updateFlag.Conversation = conversationTemplate->Actors.size() != 0;
 
     for (uint16 actorIndex = 0; actorIndex < conversationTemplate->Actors.size(); ++actorIndex)
     {
@@ -187,11 +200,12 @@ bool Conversation::Create(ObjectGuid::LowType lowGuid, uint32 conversationEntry,
     return true;
 }
 
-void Conversation::AddActor(ObjectGuid const& actorGuid, uint16 actorIdx)
+void Conversation::AddActor(ObjectGuid const& actorGuid, uint16 actorIdx, uint32 padding/* = 0*/)
 {
     ConversationDynamicFieldActor actorField;
     actorField.ActorGuid = actorGuid;
     actorField.Type = ConversationDynamicFieldActor::ActorType::WorldObjectActor;
+    actorField.Padding = padding;
     SetDynamicStructuredValue(CONVERSATION_DYNAMIC_FIELD_ACTORS, actorIdx, &actorField);
 }
 

@@ -25,6 +25,8 @@
 class Unit;
 class SpellInfo;
 
+#define CONVERSATION_RELOCATE_TICK 1000
+
 #pragma pack(push, 1)
 struct ConversationDynamicFieldActor
 {
@@ -83,7 +85,6 @@ class TC_GAME_API Conversation : public WorldObject, public GridObject<Conversat
         static Conversation* CreateConversation(uint32 conversationEntry, Unit* creator, Position const& pos, GuidUnorderedSet&& participants, SpellInfo const* spellInfo = nullptr);
         bool Create(ObjectGuid::LowType lowGuid, uint32 conversationEntry, Map* map, Unit* creator, Position const& pos, GuidUnorderedSet&& participants, SpellInfo const* spellInfo = nullptr);
         void AddActor(ObjectGuid const& actorGuid, uint16 actorIdx, uint32 padding = 0);
-
         void AddParticipant(ObjectGuid const& participantGuid);
 
         ObjectGuid const& GetCreatorGuid() const { return _creatorGuid; }
@@ -100,6 +101,7 @@ class TC_GAME_API Conversation : public WorldObject, public GridObject<Conversat
         Position _stationaryPosition;
         ObjectGuid _creatorGuid;
         uint32 _duration;
+        uint32 _relocateTick;
         uint32 _textureKitId;
         GuidUnorderedSet _participants;
 };
